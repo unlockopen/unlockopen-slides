@@ -123,6 +123,47 @@
   --color-accent: var(--color-lavender);
 }
 
+.theme-accent-pink {
+  --color-bg: var(--color-pink);
+  --color-accent: var(--color-pink-light);
+}
+.theme-accent-blush {
+  --color-bg: var(--color-blush);
+  --color-accent: var(--color-blush-light);
+}
+.theme-accent-salmon {
+  --color-bg: var(--color-salmon);
+  --color-accent: var(--color-salmon-light);
+}
+.theme-accent-tangerine {
+  --color-bg: var(--color-tangerine);
+  --color-accent: var(--color-tangerine-light);
+}
+.theme-accent-golden {
+  --color-bg: var(--color-golden);
+  --color-accent: var(--color-golden-light);
+}
+.theme-accent-apple {
+  --color-bg: var(--color-apple);
+  --color-accent: var(--color-apple-light);
+}
+.theme-accent-caribbean {
+  --color-bg: var(--color-caribbean);
+  --color-accent: var(--color-caribbean-light);
+}
+.theme-accent-aqua {
+  --color-bg: var(--color-aqua);
+  --color-accent: var(--color-aqua-light);
+}
+.theme-accent-blue {
+  --color-bg: var(--color-blue);
+  --color-accent: var(--color-blue-light);
+}
+.theme-accent-lavender {
+  --color-bg: var(--color-lavender);
+  --color-accent: var(--color-lavender-light);
+}
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -291,19 +332,15 @@ section[data-markdown]:not([data-background-image]) {
   background-color: var(--color-bg);
 }
 
-div[class^="tpl-"] {
+div[class="slide-grid"] {
   display: grid !important;
   grid-template-columns: repeat(4, 1fr);
   height: 700px;
   width: 960px;
 }
 
-div[class^="tpl-regular"] {
+div[class="slide-grid"] {
   grid-template-rows: [emoji] 10rem [main-content] auto [footer] max-content;
-}
-
-div[class^="tpl-regular2"] {
-  grid-template-rows: [emoji] 10rem [main-content] auto [footnotes] rem;
 }
 
 /* ----------------- layout zones -----------------  */
@@ -426,6 +463,10 @@ html.print-pdf .reveal .slides section {
 
 .font-light {
   color: var(--color-bg);
+}
+
+[class^="theme-accent"].font-light {
+  color: var(--color-accent);
 }
 
 .emoji-list ul {
