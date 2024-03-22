@@ -375,17 +375,17 @@ div[class^="tpl-regular2"] {
 .footer-info {
   position: relative;
   place-self: end;
-  grid-column: 3 / -1;
+  grid-column: 4 / -1;
   padding-block: var(--space-xs);
   font-size: var(--size-step-min-2);
-  font-weight: var(--font-semi-bold);
+  font-weight: var(--font-regular);
 }
 
-.footer-info :not(:empty)::before {
+.footer-info div:not(:empty):first-child::before {
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   width: 70px;
   height: 7px;
   background-color: var(--color-accent);
