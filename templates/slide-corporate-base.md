@@ -1,4 +1,4 @@
-<!-- slide template="[[base-slide]]" -->
+<!-- slide template="[[slide-base]]" -->
 
 <% content %>
 
