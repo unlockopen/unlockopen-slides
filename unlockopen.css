@@ -53,6 +53,7 @@
   --space-l-2xl: clamp(3rem, 0.64rem + 11.82vw, 9.5rem);
   --space-xl-2xl: clamp(5rem, 3.36rem + 8.18vw, 9.5rem);
   --space-2xl-3xl: clamp(8rem, 5.3rem + 13.52vw, 15.4375rem);
+  --size-step-min-2: 12px;
   --size-step-min-1: 15px;
   --size-step-0: clamp(1rem, 0.93rem + 0.34vw, 1.1875rem);
   --size-step-1: clamp(1.1875rem, 1.07rem + 0.57vw, 1.5rem);
@@ -135,10 +136,6 @@ body {
   text-align: left !important;
 }
 
-.reveal .slide-background {
-  background-color: var(--color-bg);
-}
-
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -181,7 +178,7 @@ body {
 .reveal ol {
   text-align: left;
   line-height: var(--leading-standard);
-  padding-left: 23px;
+  padding-left: 17px;
 }
 
 .reveal ul li::marker {
@@ -205,22 +202,6 @@ body {
 .reveal iframe {
   max-width: 95%;
   max-height: auto;
-}
-
-section[data-markdown] {
-  padding: var(--space-s);
-  height: 700px;
-  display: grid !important;
-}
-
-section[data-markdown]:not([data-background-image]) {
-  background-color: var(--color-bg);
-}
-
-section[data-markdown] > div {
-  display: grid !important;
-  height: 700px;
-  width: 960px;
 }
 
 ::selection {
@@ -294,43 +275,126 @@ section[data-markdown] > div {
   border-bottom: none;
 }
 
-/* layout zones */
+/* theme and templates */
 
+.reveal .slide-background {
+  background-color: var(--color-bg);
+}
+
+section[data-markdown] {
+  padding: var(--space-s);
+  height: 700px;
+  display: grid !important;
+}
+
+section[data-markdown]:not([data-background-image]) {
+  background-color: var(--color-bg);
+}
+
+div[class^="tpl-"] {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  height: 700px;
+  width: 960px;
+}
+
+div[class^="tpl-regular"] {
+  grid-template-rows: [emoji] 10rem [main-content] auto [footer] 5rem;
+}
+
+div[class^="tpl-regular2"] {
+  grid-template-rows: [emoji] 10rem [main-content] auto [footnotes] rem;
+}
+
+/* ----------------- layout zones -----------------  */
+
+/* logo is child of section[data-markdown]  */
 .logo {
   width: 11rem;
   z-index: 20;
   place-self: start;
 }
 
-.content {
-  width: 830px;
+/* children of the tpl-div */
+.emoji {
+  grid-row: emoji;
+  grid-column: 1 / -1;
+  justify-self: center;
   align-self: end;
+  font-size: var(--size-step-6);
+  line-height: var(--leading-flat);
+
+  margin-bottom: var(--space-xs);
+}
+
+.emoji p {
+  font-size: var(--size-step-6);
+  line-height: var(--leading-flat);
+  margin: 0;
+}
+
+.content {
+  grid-row: main-content;
+  grid-column: 1 / -1;
+  width: 830px;
   justify-self: center;
   z-index: 1;
 }
 
-.footer-info {
-  position: relative;
+.sources {
+  grid-row: footer;
+  grid-column: 1 / 3;
+  justify-self: start;
   align-self: end;
-  justify-self: center;
   padding: var(--space-xs);
+  font-size: var(--size-step-min-2);
+  color: var(--color-grey-dark);
+}
+
+.sources p {
+  margin: 0;
+}
+
+.footnotes {
+  grid-row: footer;
+  grid-column: 1 / 3;
+  justify-self: start;
+  align-self: end;
+  padding: var(--space-xs);
+  font-size: var(--size-step-0);
+}
+
+.footnotes p {
+  padding: var(--space-xs);
+  margin: 0;
+}
+
+.footnotes p:empty {
+  display: none;
+}
+
+.footer-info {
+  grid-row: footer;
+  grid-column: 3 / -1;
+  position: relative;
+  place-self: end;
+  padding: var(--space-xs);
+  font-size: var(--size-step-min-2);
+  font-weight: var(--font-semi-bold);
+}
+
+.footer-info p {
+  margin: 0;
 }
 
 .footer-info::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
+  left: var(--space-xs);
+  width: 70px;
   height: 7px;
   background-color: var(--color-accent);
-}
-
-.emoji p {
-  text-align: center;
-  font-size: var(--size-step-6);
-  line-height: var(--leading-flat);
 }
 
 /* print styles */
@@ -338,6 +402,10 @@ section[data-markdown] > div {
 .print-pdf .pdf-page {
   height: 728px !important;
   width: 998px !important;
+}
+
+html.print-pdf .reveal .slides section {
+  display: grid !important;
 }
 
 /* modifier classes */
@@ -356,6 +424,10 @@ section[data-markdown] > div {
 
 .font-light {
   color: var(--color-bg);
+}
+
+.emoji-list ul {
+  padding-left: 0;
 }
 
 .emoji-list ul li::marker {
