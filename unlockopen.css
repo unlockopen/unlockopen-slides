@@ -362,6 +362,11 @@ section[data-markdown] > div {
   content: "";
 }
 
+.check-list ul li::marker {
+  color: var(--color-accent);
+  content: "✓ ";
+}
+
 .content-left .content {
   text-align: left;
 }
