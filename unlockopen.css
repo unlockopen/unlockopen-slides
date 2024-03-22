@@ -332,15 +332,17 @@ section[data-markdown]:not([data-background-image]) {
   background-color: var(--color-bg);
 }
 
-div[class="slide-grid"] {
+div[class^="slide-grid"] {
   display: grid !important;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: [emoji] 10rem [main-content] auto [footer] max-content;
   height: 700px;
   width: 960px;
 }
 
-div[class="slide-grid"] {
-  grid-template-rows: [emoji] 10rem [main-content] auto [footer] max-content;
+/* slide: title centered  */
+.slide-center div[class="slide-grid"] {
+  grid-template-rows: [emoji] 40% [main-content] auto [footer] max-content;
 }
 
 /* ----------------- layout zones -----------------  */
@@ -360,7 +362,6 @@ div[class="slide-grid"] {
   align-self: end;
   font-size: var(--size-step-6);
   line-height: var(--leading-flat);
-
   margin-bottom: var(--space-xs);
 }
 
