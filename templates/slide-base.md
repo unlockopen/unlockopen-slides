@@ -8,10 +8,10 @@
 <% content %>
 </grid>
 
-<%? footnotes %>
-
 <grid class="sources">
 <%? sources %>
+
+<%? footnotes %>
 </grid>
 
 <grid class="footer-info">
