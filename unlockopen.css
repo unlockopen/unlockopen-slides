@@ -359,8 +359,12 @@ section[data-markdown] > div {
 }
 
 .emoji-list ul li::marker {
-  color: var(--color-accent);
   content: "";
+}
+
+.check-list ul li::marker {
+  color: var(--color-accent);
+  content: "✓ ";
 }
 
 .content-left .content {
