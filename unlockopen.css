@@ -359,7 +359,6 @@ section[data-markdown] > div {
 }
 
 .emoji-list ul li::marker {
-  color: var(--color-accent);
   content: "";
 }
 
