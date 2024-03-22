@@ -1,4 +1,4 @@
-<grid class="tpl-regular">
+<grid class="slide-grid">
 
 <grid class="emoji">
 <%? emoji %>
