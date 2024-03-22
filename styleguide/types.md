@@ -1,12 +1,13 @@
 ---
 defaultTemplate: "[[slide-base]]"
-theme: [[unlockopen-slides/unlockopen.css]]
+theme:
+  - - unlockopen-slides/unlockopen.css
 backgroundTransition: none
 ---
 
 <!-- slide  id="types-index" class="theme-blue emoji-list" -->
 
-#  Types
+# Types
 
 - 🏁 Title
 - 🎬 Section
@@ -22,18 +23,20 @@ backgroundTransition: none
 🏁
 :::
 
-#  Title
+# Title
+
 ## Subtitle
 
 ---
 
-<!-- slide id="type-section" class="theme-blue shape-tilted" -->
+<!-- slide id="type-section" class="slide-center theme-accent-blue" -->
 
 ::: emoji
 🎬
 :::
 
-#  Section
+# Section
+
 ## Subtitle
 
 ---
@@ -44,7 +47,8 @@ backgroundTransition: none
 📽
 :::
 
-#  Title
+# Title
+
 ## Subtitle
 
 Has some text (should be left-aligned)
@@ -52,16 +56,26 @@ Has some text (should be left-aligned)
 - maybe bullets
 - bullets
 
+Here's a simple footnote[^1]
+
+[^1]: meaningful!
+
 ---
 
 <!-- slide id="type-simple" class="theme-blue" -->
-
 
 ::: emoji
 💬
 :::
 
-#  Simple
+::: sources
+Source: statista
+
+Source: statista
+:::
+
+# Simple
+
 ## Maybe a subtitle / text?
 
 ---
@@ -72,5 +86,4 @@ Has some text (should be left-aligned)
 💭
 :::
 
->  Aside / Transition
- 
+> Aside / Transition
