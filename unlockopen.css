@@ -387,7 +387,7 @@ div[class^="tpl-regular2"] {
   margin: 0;
 }
 
-.footer-info::before {
+.footer-info :not(:empty)::before {
   content: "";
   position: absolute;
   top: 0;
