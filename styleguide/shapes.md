@@ -1,6 +1,6 @@
 ---
-defaultTemplate: "[[base-slide]]"
 theme: [[unlockopen-slides/unlockopen.css]]
+defaultTemplate: "[[slide-base]]"
 backgroundTransition: none
 ---
 
@@ -21,7 +21,6 @@ backgroundTransition: none
 
 ---
 <!-- slide id="shape-tilted" class="theme-pink shape-tilted" -->
-
 ::: emoji
 👨‍🎤
 :::

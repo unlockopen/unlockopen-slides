@@ -1,5 +1,5 @@
 ---
-defaultTemplate: "[[base-slide]]"
+defaultTemplate: "[[slide-base]]"
 theme: [[unlockopen-slides/unlockopen.css]]
 backgroundTransition: none
 ---

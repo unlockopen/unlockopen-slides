@@ -15,7 +15,7 @@
 </grid>
 
 <grid class="footer-info">
-Tobie Langel - unlockopen.com
+<%? footer %>
 </grid>
 
 </grid>
