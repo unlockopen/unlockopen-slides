@@ -9,9 +9,7 @@
 </grid>
 
 <grid class="sources">
-<%? sources %>
-
-<%? footnotes %>
+<div><%? footnotes %></div><div><%? sources %></div>
 </grid>
 
 <grid class="footer-info">
