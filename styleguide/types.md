@@ -1,7 +1,6 @@
 ---
 defaultTemplate: "[[slide-base]]"
-theme:
-  - - unlockopen-slides/unlockopen.css
+theme: [[unlockopen-slides/unlockopen.css]]
 backgroundTransition: none
 ---
 
