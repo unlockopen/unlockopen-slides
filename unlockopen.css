@@ -347,7 +347,7 @@ div[class^="tpl-regular2"] {
   justify-self: start;
   align-self: end;
   padding: var(--space-xs);
-  font-size: var(--size-step-min-2);
+  font-size: var(--size-step-min-1);
   color: var(--color-grey-dark);
 }
 
@@ -361,7 +361,7 @@ div[class^="tpl-regular2"] {
   justify-self: start;
   align-self: end;
   padding: var(--space-xs);
-  font-size: var(--size-step-0);
+  font-size: var(--size-min-1);
 }
 
 .footnotes p {
