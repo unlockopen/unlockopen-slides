@@ -8,11 +8,11 @@ backgroundTransition: none
 
 # Types
 
-- 🏁 Title
-- 🎬 Section
-- 📽 Standard
-- 💬 Simple
-- 💭 Aside
+- 🏁 [Title](#type-title)
+- 🎬 [Section](#type-section)
+- 📽 [Standard](#type-standard)
+- 💬 [Simple](#type-simple)
+- 💭 [Aside](#type-aside)
 
 ---
 
