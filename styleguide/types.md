@@ -23,6 +23,10 @@ backgroundTransition: none
 🏁
 :::
 
+::: subbrand
+![[unlockopen-slides/images/ospo.svg]]
+:::
+
 # Title
 
 ## Subtitle
@@ -45,6 +49,10 @@ backgroundTransition: none
 
 ::: emoji
 📽
+:::
+
+::: chapter
+Chapter: Section
 :::
 
 # Title
