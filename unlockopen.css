@@ -458,12 +458,12 @@ html.print-pdf .reveal .slides section {
   display: none !important;
 }
 
-.hide-footer .content {
-  align-self: center;
-}
-
 .font-light {
   color: var(--color-bg);
+}
+
+.text-upper {
+  text-transform: uppercase;
 }
 
 [class^="theme-accent"].font-light {
@@ -516,4 +516,20 @@ section.shape-sun::after {
   background-color: var(--color-accent);
   border-radius: 50%;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.slide-transition blockquote {
+  border-inline-start: none;
+  font-style: italic;
+  font-size: var(--size-step-2);
+  padding-inline: 0;
+  padding-block: 0;
+  margin: 0;
+  background-color: transparent;
+  text-align: center;
+  line-height: var(--leading-fine);
+}
+
+.slide-transition blockquote p {
+  text-align: center;
 }
