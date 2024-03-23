@@ -11,6 +11,7 @@ backgroundTransition: none
 - 🏁 [Title](#type-title)
 - 🎬 [Section](#type-section)
 - 📽 [Standard](#type-standard)
+- 📽📽 [Split](#type-split)
 - 💬 [Simple](#type-simple)
 - 💭 [Aside](#type-aside)
 
@@ -67,6 +68,31 @@ Has some text (should be left-aligned)
 Here's a simple footnote[^1]
 
 [^1]: meaningful!
+
+---
+
+<!-- slide id="type-split" class="theme-blue" -->
+
+
+::: chapter
+Chapter: Section
+:::
+
+::: left
+
+# Title
+
+## Subtitle
+
+Has some text (should be left-aligned)
+
+:::
+
+::: right
+
+![[https://unlockopen-com-v4.netlify.app/assets/images/rover-selfie-1200w.jpeg]]
+
+:::
 
 ---
 
