@@ -1,28 +1,30 @@
-<grid class="slide-grid">
+<div class="slide-grid">
 
-<grid class="topright">
+<div class="topright">
 <div class="subbrand"><%? subbrand %></div>
 <div class="chapter"><%? chapter %></div>
-</grid>
+</div>
 
-<grid class="emoji">
+<div class="emoji">
 <%? emoji %>
-</grid>
+</div>
 
-<grid class="content">
+<div class="content">
 <div class="left"><%? left %></div>
 <div class="right"><%? right %></div>
 <div class="full-width"><% content %></div>
-</grid>
+</div>
 
-<grid class="bottom-left">
-<div class="sources"><%? sources %></div><%? footnotes %>
-</grid>
+<div class="bottom-left">
+  <div class="sources"><%? sources %></div><%? footnotes %>
+</div>
 
-<grid class="bottom-right">
+<div class="bottom-right">
 <div class="author"><%? author %></div>
-</grid>
+</div>
 
-<grid class="footer">
+<div class="footer">
 <%? legal %>
-</grid>
+</div>
+
+</div>
