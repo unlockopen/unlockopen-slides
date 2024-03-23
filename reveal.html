@@ -71,7 +71,7 @@
 				fitElement(element, start, size);
 			} else {
 				fitElement(element, size, end);
-			}		
+			}
 		}
 
 
@@ -189,7 +189,7 @@
 	      RevealPointer,
 	      {{/enablePointer}}
 		  {{#enableChalkboard}}
-		  RevealChalkboard, 
+		  RevealChalkboard,
 		  {{/enableChalkboard}}
 		  {{#timeForPresentation}}
 		  {{#enableTimeBar}}
@@ -259,7 +259,7 @@
     </script>
     <script>
             document.addEventListener("DOMContentLoaded", (event) => {
-              const sections = document.querySelectorAll("section.drop");
+              const sections = document.querySelectorAll(".slide-grid");
               sections.forEach((section) => {
                 const svgMarkup = `
       		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 293 71" class="logo">
