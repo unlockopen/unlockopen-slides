@@ -10,7 +10,9 @@
 </grid>
 
 <grid class="content">
-<% content %>
+<div class="left"><%? left %></div>
+<div class="right"><%? right %></div>
+<div class="full-width"><% content %></div>
 </grid>
 
 <grid class="bottom-left">
