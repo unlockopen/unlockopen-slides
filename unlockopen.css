@@ -77,91 +77,77 @@
   --transition-timing: ease;
   --tracking: -0.05ch;
   --tracking-s: -0.075ch;
-  --color-bg: var(--color-grey-light);
   --color-text: var(--color-dark);
+  --color-bg: var(--color-grey-light);
   --color-accent: var(--color-grey-dark);
+  --theme-color-light: var(--color-grey-light);
+  --theme-color-dark: var(--color-grey-dark);
 }
 
 .theme-pink {
+  --theme-color-light: var(--color-pink-light);
+  --theme-color-dark: var(--color-pink);
   --color-bg: var(--color-pink-light);
   --color-accent: var(--color-pink);
 }
 .theme-blush {
+  --theme-color-light: var(--color-blush-light);
+  --theme-color-dark: var(--color-blush);
   --color-bg: var(--color-blush-light);
   --color-accent: var(--color-blush);
 }
 .theme-salmon {
+  --theme-color-light: var(--color-salmon-light);
+  --theme-color-dark: var(--color-salmon);
   --color-bg: var(--color-salmon-light);
   --color-accent: var(--color-salmon);
 }
 .theme-tangerine {
+  --theme-color-light: var(--color-tangerine-light);
+  --theme-color-dark: var(--color-tangerine);
   --color-bg: var(--color-tangerine-light);
   --color-accent: var(--color-tangerine);
 }
 .theme-golden {
+  --theme-color-light: var(--color-golden-light);
+  --theme-color-dark: var(--color-golden);
   --color-bg: var(--color-golden-light);
   --color-accent: var(--color-golden);
 }
 .theme-apple {
+  --theme-color-light: var(--color-apple-light);
+  --theme-color-dark: var(--color-apple);
   --color-bg: var(--color-apple-light);
   --color-accent: var(--color-apple);
 }
 .theme-caribbean {
+  --theme-color-light: var(--color-caribbean-light);
+  --theme-color-dark: var(--color-caribbean);
   --color-bg: var(--color-caribbean-light);
   --color-accent: var(--color-caribbean);
 }
 .theme-aqua {
+  --theme-color-light: var(--color-aqua-light);
+  --theme-color-dark: var(--color-aqua);
   --color-bg: var(--color-aqua-light);
   --color-accent: var(--color-aqua);
 }
 .theme-blue {
+  --theme-color-light: var(--color-blue-light);
+  --theme-color-dark: var(--color-blue);
   --color-bg: var(--color-blue-light);
   --color-accent: var(--color-blue);
 }
 .theme-lavender {
+  --theme-color-light: var(--color-lavender-light);
+  --theme-color-dark: var(--color-lavender);
   --color-bg: var(--color-lavender-light);
   --color-accent: var(--color-lavender);
 }
 
-.theme-accent-pink {
-  --color-bg: var(--color-pink);
-  --color-accent: var(--color-pink-light);
-}
-.theme-accent-blush {
-  --color-bg: var(--color-blush);
-  --color-accent: var(--color-blush-light);
-}
-.theme-accent-salmon {
-  --color-bg: var(--color-salmon);
-  --color-accent: var(--color-salmon-light);
-}
-.theme-accent-tangerine {
-  --color-bg: var(--color-tangerine);
-  --color-accent: var(--color-tangerine-light);
-}
-.theme-accent-golden {
-  --color-bg: var(--color-golden);
-  --color-accent: var(--color-golden-light);
-}
-.theme-accent-apple {
-  --color-bg: var(--color-apple);
-  --color-accent: var(--color-apple-light);
-}
-.theme-accent-caribbean {
-  --color-bg: var(--color-caribbean);
-  --color-accent: var(--color-caribbean-light);
-}
-.theme-accent-aqua {
-  --color-bg: var(--color-aqua);
-  --color-accent: var(--color-aqua-light);
-}
-.theme-accent-blue {
-  --color-bg: var(--color-blue);
-  --color-accent: var(--color-blue-light);
-}
-.theme-accent-lavender {
-  --color-bg: var(--color-lavender);
-  --color-accent: var(--color-lavender-light);
+.theme-accent {
+  --color-bg: var(--theme-color-dark);
+  --color-accent: var(--theme-color-light);
 }
 
 /*********************************************
@@ -345,6 +331,10 @@ div[class^="slide-grid"] {
   grid-template-rows: [emoji] 40% [main-content] auto [footer] max-content;
 }
 
+.reveal .slide-center p {
+  text-align: center;
+}
+
 /* ----------------- layout zones -----------------  */
 
 /* logo is child of section[data-markdown]  */
@@ -497,12 +487,12 @@ html.print-pdf .reveal .slides section {
   color: var(--color-bg);
 }
 
-.text-upper {
-  text-transform: uppercase;
+.theme-accent.font-light {
+  color: var(--theme-color-light);
 }
 
-[class^="theme-accent"].font-light {
-  color: var(--color-accent);
+.text-upper {
+  text-transform: uppercase;
 }
 
 .emoji-list ul {

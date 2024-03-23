@@ -33,7 +33,7 @@ backgroundTransition: none
 
 ---
 
-<!-- slide id="type-section" class="theme-accent-blue slide-center " -->
+<!-- slide id="type-section" class="theme-blue theme-accent slide-center" -->
 
 ::: emoji
 🎬
