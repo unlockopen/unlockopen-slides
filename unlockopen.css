@@ -433,6 +433,8 @@ div[class^="slide-grid"] {
   display: grid;
   align-items: end;
   padding: 0.2rem;
+  justify-self: center;
+  
 }
 
 .footer p {
