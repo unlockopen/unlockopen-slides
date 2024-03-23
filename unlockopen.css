@@ -330,7 +330,7 @@ div[class^="slide-grid"] {
 
 /* slide: title centered  */
 .slide-center div[class="slide-grid"] {
-  grid-template-rows: [emoji] 40% [main-content] auto [footer] max-content;
+  grid-template-rows: [emoji] 40% [main-content] auto [bottom-content] max-content [footer] max-content;
 }
 
 .reveal .slide-center p {
