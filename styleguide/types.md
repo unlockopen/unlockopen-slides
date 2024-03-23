@@ -28,7 +28,7 @@ backgroundTransition: none
 
 ---
 
-<!-- slide id="type-section" class="slide-center theme-accent-blue" -->
+<!-- slide id="type-section" class="theme-blue theme-accent slide-center" -->
 
 ::: emoji
 🎬
