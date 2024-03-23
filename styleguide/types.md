@@ -8,18 +8,23 @@ backgroundTransition: none
 
 # Types
 
-- 🏁 Title
-- 🎬 Section
-- 📽 Standard
-- 💬 Simple
-- 💭 Aside
+- 🏁 [Title](#type-title)
+- 🎬 [Section](#type-section)
+- 📽 [Standard](#type-standard)
+- 💬 [Simple](#type-simple)
+- 💭 [Aside](#type-aside)
 
 ---
 
-<!-- slide id="type-title" class="theme-blue" -->
+<!-- slide id="type-title" class="theme-blue slide-center hide-logo hide-footer font-light text-shadow text-upper" -->
+<!-- slide bg="https://unlockopen-com-v4.netlify.app/assets/images/rover-selfie-1200w.jpeg" -->
 
 ::: emoji
 🏁
+:::
+
+::: subbrand
+![[unlockopen-slides/images/ospo.svg]]
 :::
 
 # Title
@@ -46,6 +51,10 @@ backgroundTransition: none
 📽
 :::
 
+::: chapter
+Chapter: Section
+:::
+
 # Title
 
 ## Subtitle
@@ -61,7 +70,7 @@ Here's a simple footnote[^1]
 
 ---
 
-<!-- slide id="type-simple" class="theme-blue" -->
+<!-- slide id="type-simple" class="theme-blue slide-center" -->
 
 ::: emoji
 💬
@@ -79,7 +88,7 @@ Source: statista
 
 ---
 
-<!-- slide id="type-aside" class="theme-blue" -->
+<!-- slide id="type-aside" class="theme-blue slide-center slide-transition" -->
 
 ::: emoji
 💭

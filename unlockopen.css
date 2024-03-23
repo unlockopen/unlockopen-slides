@@ -345,6 +345,41 @@ div[class^="slide-grid"] {
 }
 
 /* children of the tpl-div */
+
+.topright {
+  position: absolute;
+  right: 0;
+  display: grid;
+  min-height: 3.2rem;
+}
+
+.subbrand:empty {
+  display: none;
+}
+
+.subbrand img {
+  margin-top: var(--space-xs);
+  padding: var(--space-xs);
+  width: auto;
+  height: 3.5rem;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+}
+
+.chapter p {
+  font-size: var(--size-step-min-2);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking);
+  font-weight: var(--font-semi-bold);
+  padding-right: 0.2rem;
+  margin: 0;
+  text-align: right;
+}
+
+.subbrand:empty + .chapter {
+  align-self: end;
+}
+
 .emoji {
   grid-row: emoji;
   grid-column: 1 / -1;
@@ -448,16 +483,16 @@ html.print-pdf .reveal .slides section {
   display: none !important;
 }
 
-.hide-footer .content {
-  align-self: center;
-}
-
 .font-light {
   color: var(--color-bg);
 }
 
 .theme-accent.font-light {
   color: var(--theme-color-light);
+}
+
+.text-upper {
+  text-transform: uppercase;
 }
 
 .emoji-list ul {
@@ -506,4 +541,20 @@ section.shape-sun::after {
   background-color: var(--color-accent);
   border-radius: 50%;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.slide-transition blockquote {
+  border-inline-start: none;
+  font-style: italic;
+  font-size: var(--size-step-2);
+  padding-inline: 0;
+  padding-block: 0;
+  margin: 0;
+  background-color: transparent;
+  text-align: center;
+  line-height: var(--leading-fine);
+}
+
+.slide-transition blockquote p {
+  text-align: center;
 }

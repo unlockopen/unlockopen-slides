@@ -1,5 +1,10 @@
 <grid class="slide-grid">
 
+<grid class="topright">
+<div class="subbrand"><%? subbrand %></div>
+<div class="chapter"><%? chapter %></div>
+</grid>
+
 <grid class="emoji">
 <%? emoji %>
 </grid>
