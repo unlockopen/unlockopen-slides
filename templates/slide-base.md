@@ -13,10 +13,14 @@
 <% content %>
 </grid>
 
-<grid class="footer">
-<%? footnotes %>
-<div class="sources"><%? sources %></div>
-<div class="footer-info"><%? footer %></div>
+<grid class="bottom-left">
+<div class="sources"><%? sources %></div><%? footnotes %>
 </grid>
 
+<grid class="bottom-right">
+<div class="author"><%? author %></div>
+</grid>
+
+<grid class="footer">
+<%? legal %>
 </grid>
