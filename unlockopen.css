@@ -227,7 +227,7 @@ body {
 .reveal img,
 .reveal video,
 .reveal iframe {
-  max-width: 95%;
+  max-width: 100%;
   max-height: auto;
 }
 
@@ -405,6 +405,7 @@ div[class^="slide-grid"] {
   width: 830px;
   justify-self: center;
   z-index: 1;
+  column-gap: 1rem;
 }
 
 .full-width {
