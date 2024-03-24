@@ -401,8 +401,6 @@ div[class^="slide-grid"] {
   grid-column: 1 / -1;
   justify-self: center;
   align-self: end;
-  font-size: var(--size-step-6);
-  line-height: var(--leading-flat);
   margin-bottom: var(--space-xs);
 }
 
@@ -415,8 +413,8 @@ div[class^="slide-grid"] {
 .content {
   grid-row: main-content;
   grid-column: 1 / -1;
-	display: grid;
-	grid-template-columns: subgrid;
+  display: grid;
+  grid-template-columns: subgrid;
   width: 830px;
   justify-self: center;
   z-index: 1;
@@ -441,9 +439,7 @@ div[class^="slide-grid"] {
 	display: none;
 }
 
-
 .footer {
-  color: var(--theme-color-subdued);
   position: relative;
   grid-row: footer;
   grid-column: 1 / -1;
@@ -456,6 +452,7 @@ div[class^="slide-grid"] {
 
 .footer p {
   margin: 0;
+  color: var(--theme-color-subdued);
   font-size: var(--size-step-min-2);
   text-align: center;
   line-height: var(--leading-fine);
@@ -491,8 +488,6 @@ div[class^="slide-grid"] {
 .bottom-right {
   justify-items: end;
 }
-
-/* subdued font colors */
 
 .bottom-left p,
 .bottom-right p,
