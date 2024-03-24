@@ -433,7 +433,7 @@ div[class^="slide-grid"] {
   grid-column: 1 / -1;
   display: grid;
   align-items: end;
-  padding: 0.2rem;
+  padding: 0.5rem;
   justify-self: center;
   
 }
@@ -446,7 +446,8 @@ div[class^="slide-grid"] {
   line-height: var(--leading-fine);
 }
 
-.footer div:not(:empty):first-child::before {
+/* footer decoration */
+.footer::before {
   content: "";
   position: absolute;
   top: 0;
@@ -456,6 +457,8 @@ div[class^="slide-grid"] {
   height: 1px;
   background-color: color-mix(in oklab, var(--color-accent) 20%, var(--color-bg));
 }
+/* end decoration  */
+
 
 .bottom-left,
 .bottom-right {

@@ -2,6 +2,14 @@
 defaultTemplate: "[[slide-base]]"
 theme: [[unlockopen-slides/unlockopen.css]]
 backgroundTransition: none
+title: "UnlockOpen Slide Types"
+logo: true
+metadata:
+  copyright:
+    owner: "UnlockOpen, LLC"
+    year: 2024
+author:
+  name: "Tobie Langel"
 ---
 
 <!-- slide  id="types-index" class="theme-blue emoji-list" -->
@@ -69,6 +77,11 @@ Here's a simple footnote[^1]
 
 [^1]: meaningful!
 
+::: aside
+*and here's a note
+:::
+
+
 ---
 
 <!-- slide id="type-split" class="theme-blue" -->
@@ -102,7 +115,7 @@ Has some text (should be left-aligned)
 💬
 :::
 
-::: sources
+::: src
 Source: statista
 
 Source: statista

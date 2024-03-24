@@ -2,6 +2,18 @@
 theme: [[unlockopen-slides/unlockopen.css]]
 defaultTemplate: "[[slide-base]]"
 backgroundTransition: none
+title: "UnlockOpen Themes"
+id: "DRFT-PRES-SELF-20240325"
+logo: true
+metadata:
+  confidential: true
+  copyright:
+    owner: "UnlockOpen, LLC"
+    year: 2024
+author:
+  name: "Tobie Langel"
+  title: "Principal"
+  email: "tobie@unlockopen.com"
 ---
 
 <!-- slide id="theme" class="emoji-list" -->

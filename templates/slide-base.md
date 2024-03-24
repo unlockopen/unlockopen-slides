@@ -16,15 +16,6 @@
 </div>
 
 <div class="bottom-left">
-  <div class="sources"><%? sources %></div><%? footnotes %>
+  <%? aside %><%? src %><%? footnotes %>
 </div>
-
-<div class="bottom-right">
-<div class="author"><%? author %></div>
-</div>
-
-<div class="footer">
-<%? legal %>
-</div>
-
 </div>
