@@ -427,6 +427,7 @@ div[class^="slide-grid"] {
 
 
 .footer {
+  color: var(--theme-color-subdued);
   position: relative;
   grid-row: footer;
   grid-column: 1 / -1;
@@ -493,6 +494,8 @@ div[class^="slide-grid"] {
   margin: 0.2rem var(--space-xs);
 }
 
+/* CURRENTLY NOT USED (broken)
+
 .author div:not(:empty):first-child::before {
   content: "";
   position: absolute;
@@ -503,6 +506,8 @@ div[class^="slide-grid"] {
   background-color: var(--color-accent);
   margin-left: var(--space-xs);
 }
+
+*/
 
 /* print styles */
 
@@ -521,7 +526,7 @@ html.print-pdf .reveal .slides section {
   display: none;
 }
 
-.hide-author .author {
+.hide-author .bottom-right {
   display: none !important;
 }
 
@@ -551,10 +556,6 @@ html.print-pdf .reveal .slides section {
 }
 
 .content-left .content {
-  text-align: left;
-}
-
-.parapgraph-left p {
   text-align: left;
 }
 
