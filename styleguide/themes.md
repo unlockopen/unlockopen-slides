@@ -47,7 +47,7 @@ author:
 
 ---
 
-<!-- slide id="theme-pink" class="theme-pink slide-center" -->
+<!-- slide id="theme-pink" class="theme-pink simple-slide" -->
 ::: emoji
 🐷
 :::
@@ -57,7 +57,7 @@ Background: \#f9f0f6 • Accent: \#c766a1
 
 ---
 
-<!-- slide id="theme-pink-accent" class="theme-pink theme-accent slide-center" -->
+<!-- slide id="theme-pink-accent" class="theme-pink theme-accent simple-slide" -->
 
 ::: emoji
 🐽
@@ -68,7 +68,7 @@ Background: \#c766a1 • Accent: \#f9f0f6
 
 ---
 
-<!-- slide id="theme-blush" class="theme-blush slide-center" -->
+<!-- slide id="theme-blush" class="theme-blush simple-slide" -->
 
 ::: emoji
 👄
@@ -79,7 +79,7 @@ Background: \#fef1f4 • Accent: \#f07392
 
 ---
 
-<!-- slide id="theme-accent-blush" class="theme-blush theme-accent slide-center" -->
+<!-- slide id="theme-accent-blush" class="theme-blush theme-accent simple-slide" -->
 
 ::: emoji
 🫦
@@ -90,7 +90,7 @@ Background: \#f07392 • Accent: \#fef1f4
 
 ---
 
-<!-- slide id="theme-salmon" class="theme-salmon slide-center" -->
+<!-- slide id="theme-salmon" class="theme-salmon simple-slide" -->
 
 ::: emoji
 🐟
@@ -101,7 +101,7 @@ Background: \#fff3f2 • Accent: \#ff8b7f
 
 ---
 
-<!-- slide id="theme-accent-salmon" class="theme-salmon theme-accent slide-center" -->
+<!-- slide id="theme-accent-salmon" class="theme-salmon theme-accent simple-slide" -->
 
 ::: emoji
 🍣
@@ -112,7 +112,7 @@ Background: \#ff8b7f • Accent: \#fff3f2
 
 ---
 
-<!-- slide id="theme-tangerine" class="theme-tangerine slide-center" -->
+<!-- slide id="theme-tangerine" class="theme-tangerine simple-slide" -->
 
 ::: emoji
 🍊
@@ -123,7 +123,7 @@ Background: \#fef5ef • Accent: \#f49762
 
 ---
 
-<!-- slide id="theme-accent-tangerine" class="theme-tangerine theme-accent slide-center" -->
+<!-- slide id="theme-accent-tangerine" class="theme-tangerine theme-accent simple-slide" -->
 
 ::: emoji
 🥤
@@ -134,7 +134,7 @@ Background: \#f49762 • Accent: \#fef5ef
 
 ---
 
-<!-- slide id="theme-golden" class="theme-golden slide-center" -->
+<!-- slide id="theme-golden" class="theme-golden simple-slide" -->
 
 ::: emoji
 📷
@@ -145,7 +145,7 @@ Background: \#fffaf0 • Accent: \#ffd164
 
 ---
 
-<!-- slide id="theme-accent-golden" class="theme-golden theme-accent slide-center" -->
+<!-- slide id="theme-accent-golden" class="theme-golden theme-accent simple-slide" -->
 
 ::: emoji
 📸
@@ -156,7 +156,7 @@ Background: \#ffd164 • Accent: \#fffaf0
 
 ---
 
-<!-- slide id="theme-apple" class="theme-apple slide-center" -->
+<!-- slide id="theme-apple" class="theme-apple simple-slide" -->
 
 ::: emoji
 🍏
@@ -167,7 +167,7 @@ Background: \#f6fbf2 • Accent: \#a1d47b
 
 ---
 
-<!-- slide id="theme-accent-apple" class="theme-apple theme-accent slide-center" -->
+<!-- slide id="theme-accent-apple" class="theme-apple theme-accent simple-slide" -->
 
 ::: emoji
 🍎
@@ -178,7 +178,7 @@ Background: \#a1d47b • Accent: \#f6fbf2
 
 ---
 
-<!-- slide id="theme-caribbean" class="theme-caribbean slide-center" -->
+<!-- slide id="theme-caribbean" class="theme-caribbean simple-slide" -->
 
 ::: emoji
 🏝
@@ -189,7 +189,7 @@ Background: \#e6faf6 • Accent: \#00c9a9
 
 ---
 
-<!-- slide id="theme-accent-caribbean" class="theme-caribbean theme-accent slide-center" -->
+<!-- slide id="theme-accent-caribbean" class="theme-caribbean theme-accent simple-slide" -->
 
 ::: emoji
 🍹
@@ -200,7 +200,7 @@ Background: \#00c9a9 • Accent: \#e6faf6
 
 ---
 
-<!-- slide id="theme-aqua" class="theme-aqua slide-center" -->
+<!-- slide id="theme-aqua" class="theme-aqua simple-slide" -->
 
 ::: emoji
 🤿
@@ -211,7 +211,7 @@ Background: \#e6f3f6 • Accent: \#0084a3
 
 ---
 
-<!-- slide id="theme-accent-aqua" class="theme-aqua theme-accent slide-center" -->
+<!-- slide id="theme-accent-aqua" class="theme-aqua theme-accent simple-slide" -->
 
 ::: emoji
 🦈
@@ -222,7 +222,7 @@ Background: \#0084a3 • Accent: \#e6f3f6
 
 ---
 
-<!-- slide id="theme-blue" class="theme-blue slide-center" -->
+<!-- slide id="theme-blue" class="theme-blue simple-slide" -->
 
 ::: emoji
 🌊
@@ -233,7 +233,7 @@ Background: \#e6f3fa • Accent: \#0083cb
 
 ---
 
-<!-- slide id="theme-accent-blue" class="theme-blue theme-accent slide-center" -->
+<!-- slide id="theme-accent-blue" class="theme-blue theme-accent simple-slide" -->
 
 ::: emoji
 🧊
@@ -244,7 +244,7 @@ Background: \#0083cb • Accent: \#e6f3fa
 
 ---
 
-<!-- slide id="theme-lavender" class="theme-lavender slide-center" -->
+<!-- slide id="theme-lavender" class="theme-lavender simple-slide" -->
 
 ::: emoji
 🐝
@@ -255,7 +255,7 @@ Background: \#f5f1f9 • Accent: \#966fc4
 
 ---
 
-<!-- slide id="theme-accent-lavender" class="theme-lavender theme-accent slide-center" -->
+<!-- slide id="theme-accent-lavender" class="theme-lavender theme-accent simple-slide" -->
 
 ::: emoji
 🐝🐝🐝

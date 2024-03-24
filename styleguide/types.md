@@ -25,7 +25,7 @@ author:
 
 ---
 
-<!-- slide id="type-title" class="theme-blue slide-center hide-logo hide-footer font-light text-shadow text-upper" -->
+<!-- slide id="type-title" class="theme-blue simple-slide" -->
 <!-- slide bg="https://unlockopen-com-v4.netlify.app/assets/images/rover-selfie-1200w.jpeg" -->
 
 ::: emoji
@@ -42,7 +42,7 @@ author:
 
 ---
 
-<!-- slide id="type-section" class="theme-blue theme-accent slide-center" -->
+<!-- slide id="type-section" class="theme-blue theme-accent simple-slide" -->
 
 ::: emoji
 🎬
@@ -78,7 +78,7 @@ Here's a simple footnote[^1]
 [^1]: meaningful!
 
 ::: aside
-*and here's a note
+\*and here's a note
 :::
 
 
@@ -109,7 +109,7 @@ Has some text (should be left-aligned)
 
 ---
 
-<!-- slide id="type-simple" class="theme-blue slide-center" -->
+<!-- slide id="type-simple" class="theme-blue simple-slide" -->
 
 ::: emoji
 💬
@@ -127,7 +127,7 @@ Source: statista
 
 ---
 
-<!-- slide id="type-aside" class="theme-blue slide-center slide-transition" -->
+<!-- slide id="type-aside" class="theme-blue simple-slide" -->
 
 ::: emoji
 💭

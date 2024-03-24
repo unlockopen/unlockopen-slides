@@ -328,11 +328,27 @@ div[class^="slide-grid"] {
 }
 
 /* slide: title centered  */
-.slide-center div[class="slide-grid"] {
+.simple-slide div[class="slide-grid"] {
   grid-template-rows: [emoji] 40% [main-content] auto [bottom-content] max-content [footer] max-content;
 }
 
-.reveal .slide-center p {
+.reveal .simple-slide p {
+  text-align: center;
+}
+
+.simple-slide blockquote {
+  border-inline-start: none;
+  font-style: italic;
+  font-size: var(--size-step-2);
+  padding-inline: 0;
+  padding-block: 0;
+  margin: 0;
+  background-color: transparent;
+  text-align: center;
+  line-height: var(--leading-fine);
+}
+
+.simple-slide  blockquote p {
   text-align: center;
 }
 
@@ -538,10 +554,6 @@ html.print-pdf .reveal .slides section {
   color: var(--theme-color-light);
 }
 
-.text-upper {
-  text-transform: uppercase;
-}
-
 .emoji-list ul {
   padding-left: 0;
 }
@@ -586,18 +598,4 @@ section.shape-sun::after {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-.slide-transition blockquote {
-  border-inline-start: none;
-  font-style: italic;
-  font-size: var(--size-step-2);
-  padding-inline: 0;
-  padding-block: 0;
-  margin: 0;
-  background-color: transparent;
-  text-align: center;
-  line-height: var(--leading-fine);
-}
 
-.slide-transition blockquote p {
-  text-align: center;
-}
