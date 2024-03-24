@@ -28,44 +28,32 @@ author:
 <!-- slide id="type-title" class="theme-blue simple-slide" -->
 <!-- slide bg="https://unlockopen-com-v4.netlify.app/assets/images/rover-selfie-1200w.jpeg" -->
 
-::: emoji
-🏁
-:::
-
 ::: subbrand
 ![[unlockopen-slides/images/ospo.svg]]
 :::
 
+# == 🏁 ==
 # Title
-
 ## Subtitle
 
 ---
 
 <!-- slide id="type-section" class="theme-blue theme-accent simple-slide" -->
 
-::: emoji
-🎬
-:::
-
+# == 🎬 ==
 # Section
-
 ## Subtitle
 
 ---
 
 <!-- slide id="type-standard" class="theme-blue" -->
 
-::: emoji
-📽
-:::
-
 ::: chapter
 Chapter: Section
 :::
 
+# == 📽 ==
 # Title
-
 ## Subtitle
 
 Has some text (should be left-aligned)
@@ -91,10 +79,12 @@ Here's a simple footnote[^1]
 Chapter: Section
 :::
 
+
+
 ::: left
 
+# == 📽📽 ==
 # Title
-
 ## Subtitle
 
 Has some text (should be left-aligned)
@@ -111,26 +101,19 @@ Has some text (should be left-aligned)
 
 <!-- slide id="type-simple" class="theme-blue simple-slide" -->
 
-::: emoji
-💬
-:::
-
 ::: src
 Source: statista
 
 Source: statista
 :::
 
+# == 💬 ==
 # Simple
-
 ## Maybe a subtitle / text?
 
 ---
 
 <!-- slide id="type-aside" class="theme-blue simple-slide" -->
 
-::: emoji
-💭
-:::
-
+# == 💭 ==
 > Aside / Transition

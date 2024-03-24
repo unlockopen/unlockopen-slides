@@ -254,9 +254,6 @@
       var options = extend(defaultOptions, {{{revealOptionsStr}}}, queryOptions);
     </script>
 
-    <script>
-      Reveal.initialize(options);
-    </script>
     {{#logo}}
     <template id="logo-template">
           		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 293 71" class="logo">
@@ -309,13 +306,12 @@
               </div>
         </template>
     {{/metadata}}
-
     
-    <script>
-            document.addEventListener("DOMContentLoaded", (event) => {
-              const sections = document.querySelectorAll(".slide-grid");
-              sections.forEach((section) => {
-                
+        <script>
+            Reveal.initialize(options).then(_ => {
+              const slides = document.querySelectorAll(".slide-grid");
+              slides.forEach((slide) => {
+  
                   function insertTemplate(id, position, parent) {
                       const template = document.querySelector(id);
                       if (template) {
@@ -324,10 +320,21 @@
                       }
                   }
 
-                  insertTemplate("#logo-template", "afterbegin", section);
-                  insertTemplate("#author-template", "beforeend", section);
-                  insertTemplate("#footer-template", "beforeend", section);
+                  insertTemplate("#logo-template", "afterbegin", slide);
+                  insertTemplate("#author-template", "beforeend", slide);
+                  insertTemplate("#footer-template", "beforeend", slide);
+                  
+                  const emoji = slide.querySelector(".content :first-child mark");
+                  if (emoji) {
+                      const div = document.createElement("div");
+                      div.classList.add("emoji");
+                      div.textContent = emoji.textContent;
+                      emoji.parentNode.remove();
+                      const content = slide.querySelector(".content");
+                      content.insertAdjacentElement("beforebegin", div);
+                  }
               });
+              
             });
         </script>
   </body>

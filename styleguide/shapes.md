@@ -12,16 +12,13 @@ backgroundTransition: none
 - 👨‍🎤 [tilted](#shape-tilted)
 
 ---
-<!-- slide id="shape-sun"class="theme-golden shape-sun" -->
+<!-- slide id="shape-sun"class="theme-golden shape-sun simple-slide" -->
 
-::: emoji
-⛅️
-:::
+# == ⛅️ ==
 #  Sun
 
 ---
-<!-- slide id="shape-tilted" class="theme-pink shape-tilted" -->
-::: emoji
-👨‍🎤
-:::
+<!-- slide id="shape-tilted" class="theme-pink shape-tilted simple-slide" -->
+
+# == 👨‍🎤 ==
 #  Tilted

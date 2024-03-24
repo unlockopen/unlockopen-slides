@@ -15,9 +15,7 @@ backgroundTransition: none
 
 <!-- slide id="emoji-list"class="theme-lavender emoji-list" -->
 
-::: emoji
-🤗
-:::
+# == 🤗 ==
 #  Emoji list
 
 - 🐷 pink
@@ -32,10 +30,7 @@ backgroundTransition: none
 
 <!-- slide id="check-list" class="theme-apple check-list" -->
 
-::: emoji
-✅
-:::
-
+# == ✅ ==
 #  Check list
 - So…
 - many… 

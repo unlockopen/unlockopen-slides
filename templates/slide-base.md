@@ -5,10 +5,6 @@
 <div class="chapter"><%? chapter %></div>
 </div>
 
-<div class="emoji">
-<%? emoji %>
-</div>
-
 <div class="content">
 <div class="left"><%? left %></div>
 <div class="right"><%? right %></div>

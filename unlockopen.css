@@ -402,12 +402,9 @@ div[class^="slide-grid"] {
   justify-self: center;
   align-self: end;
   margin-bottom: var(--space-xs);
-}
-
-.emoji p {
   font-size: var(--size-step-6);
   line-height: var(--leading-flat);
-  margin: 0;
+  
 }
 
 .content {
