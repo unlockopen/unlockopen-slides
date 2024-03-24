@@ -87,67 +87,66 @@
 .theme-pink {
   --theme-color-light: var(--color-pink-light);
   --theme-color-dark: var(--color-pink);
-  --color-bg: var(--color-pink-light);
-  --color-accent: var(--color-pink);
 }
 .theme-blush {
   --theme-color-light: var(--color-blush-light);
   --theme-color-dark: var(--color-blush);
-  --color-bg: var(--color-blush-light);
-  --color-accent: var(--color-blush);
 }
 .theme-salmon {
   --theme-color-light: var(--color-salmon-light);
   --theme-color-dark: var(--color-salmon);
-  --color-bg: var(--color-salmon-light);
-  --color-accent: var(--color-salmon);
 }
 .theme-tangerine {
   --theme-color-light: var(--color-tangerine-light);
   --theme-color-dark: var(--color-tangerine);
-  --color-bg: var(--color-tangerine-light);
-  --color-accent: var(--color-tangerine);
 }
 .theme-golden {
   --theme-color-light: var(--color-golden-light);
   --theme-color-dark: var(--color-golden);
-  --color-bg: var(--color-golden-light);
-  --color-accent: var(--color-golden);
 }
 .theme-apple {
   --theme-color-light: var(--color-apple-light);
   --theme-color-dark: var(--color-apple);
-  --color-bg: var(--color-apple-light);
-  --color-accent: var(--color-apple);
 }
 .theme-caribbean {
   --theme-color-light: var(--color-caribbean-light);
   --theme-color-dark: var(--color-caribbean);
-  --color-bg: var(--color-caribbean-light);
-  --color-accent: var(--color-caribbean);
 }
 .theme-aqua {
   --theme-color-light: var(--color-aqua-light);
   --theme-color-dark: var(--color-aqua);
-  --color-bg: var(--color-aqua-light);
-  --color-accent: var(--color-aqua);
 }
 .theme-blue {
   --theme-color-light: var(--color-blue-light);
   --theme-color-dark: var(--color-blue);
-  --color-bg: var(--color-blue-light);
-  --color-accent: var(--color-blue);
 }
 .theme-lavender {
   --theme-color-light: var(--color-lavender-light);
   --theme-color-dark: var(--color-lavender);
-  --color-bg: var(--color-lavender-light);
-  --color-accent: var(--color-lavender);
 }
 
-.theme-accent {
+/* Set colors for regular themes */
+section[data-markdown],
+.slide-background {
+    --color-bg: var(--theme-color-light);
+    --color-accent: var(--theme-color-dark);
+    --theme-color-subdued: color-mix(in oklab, var(--color-grey-dark) 50%, var(--color-bg));
+}
+
+/* Set colors for the accented themes */
+section[data-markdown].theme-accent,
+.slide-background.theme-accent {
   --color-bg: var(--theme-color-dark);
   --color-accent: var(--theme-color-light);
+} 
+
+/* Some of the darker accented teams need fine-tuning for contrast */
+.theme-pink.theme-accent,
+.theme-blush.theme-accent,
+.theme-aqua.theme-accent,
+.theme-blue.theme-accent,
+.theme-lavender.theme-accent {
+    --theme-color-subdued: color-mix(in oklab, var(--theme-color-light) 50%, var(--theme-color-dark));
 }
 
 /*********************************************
@@ -441,7 +440,6 @@ div[class^="slide-grid"] {
 .footer p {
   margin: 0;
   font-size: var(--size-step-min-2);
-  color: var(--color-grey-dark);
   text-align: center;
   line-height: var(--leading-fine);
 }
@@ -462,62 +460,37 @@ div[class^="slide-grid"] {
 
 .bottom-left,
 .bottom-right {
+  padding: var(--space-xs);
   grid-row: bottom-content;
   grid-column: 1 / -1;
   display: grid;
+  align-items: end;
 }
 
 .bottom-left {
   justify-items: start;
-  align-items: end;
 }
 
 .bottom-right {
   justify-items: end;
-  align-items: end;
 }
 
-.sources {
-  font-size: var(--size-step-min-2);
-  color: var(--color-grey-dark);
-  grid-row: 2;
-  padding-bottom: var(--space-xs);
-}
+/* subdued font colors */
 
-.sources p {
+.bottom-left p,
+.bottom-right p,
+.bottom-left ol,
+.bottom-left li {
+  font-size: var(--size-step-min-1);
+  color: var(--theme-color-subdued);
+  font-weight: var(--font-regular);
   padding: 0;
   margin: 0;
-}
-
-.footnotes ol {
-  margin: 0.2rem var(--space-xs);
-  padding-left: 0.4rem;
   line-height: var(--leading-flat);
 }
 
-.footnotes {
-  grid-row: 1;
-  font-size: var(--size-step-0);
-}
-
-.footnotes p {
-  padding: 0;
-  margin: 0;
-}
-
-.footnotes p:empty {
-  display: none;
-}
-
-.author {
-  position: relative;
-  padding: var(--space-xs);
-  font-size: var(--size-step-min-2);
-  font-weight: var(--font-regular);
-}
-
-.author p {
-  margin: 0;
+.bottom-left ol {
+  margin: 0.2rem var(--space-xs);
 }
 
 .author div:not(:empty):first-child::before {
