@@ -182,8 +182,11 @@ body {
 .reveal h2 {
   font-size: var(--size-step-3);
 }
+
 .reveal h3 {
   font-size: var(--size-step-2);
+  text-align: left;
+  margin-bottom: 0;
 }
 
 .reveal p {
@@ -207,8 +210,17 @@ body {
   padding-left: 17px;
 }
 
-.reveal ul li::marker {
+.reveal h3 ~ ul,
+.reveal h3 ~ ul {
+    margin-top: 0;
+}
+
+.reveal li::marker {
   color: var(--color-accent);
+  font-weight: var(--font-medium);
+}
+
+.reveal ul li::marker {
   content: "– ";
 }
 
@@ -242,6 +254,11 @@ body {
 
 .reveal q {
   font-style: italic;
+}
+
+h1 mark, h2 mark, h3 mark {
+    background: none;
+    color: var(--color-accent);
 }
 
 .reveal pre {
