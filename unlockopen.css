@@ -563,17 +563,37 @@ html.print-pdf .reveal .slides section {
   color: var(--theme-color-light);
 }
 
-.emoji-list ul {
-  padding-left: 0;
-}
-
-.emoji-list ul li::marker {
+.reveal ul li.equals-line::marker {
   content: "";
 }
 
-.check-list ul li::marker {
-  color: var(--color-accent);
-  content: "✔ ";
+.reveal ul li.equals-line {
+    position: relative;
+    margin-top: var(--space-xs);
+    padding-top: var(--space-xs);
+    height: 0;
+}
+
+.reveal ul li.equals-line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 60%;
+    height: 3px;
+    background-color: var(--color-accent);
+}
+
+.reveal ul li[data-marker-content]::marker {
+    content: attr(data-marker-content);
+}
+
+.reveal ul li[data-marker-content].marker-success::marker {
+    color: var(--color-apple);
+}
+
+.reveal ul li[data-marker-content].marker-failure::marker {
+    color: var(--color-blush);
 }
 
 .content-left .content {

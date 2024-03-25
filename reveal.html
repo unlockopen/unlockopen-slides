@@ -309,8 +309,7 @@
     
         <script>
             Reveal.initialize(options).then(_ => {
-              const slides = document.querySelectorAll(".slide-grid");
-              slides.forEach((slide) => {
+              document.querySelectorAll(".slide-grid").forEach((slide) => {
   
                   function insertTemplate(id, position, parent) {
                       const template = document.querySelector(id);
@@ -323,17 +322,92 @@
                   insertTemplate("#logo-template", "afterbegin", slide);
                   insertTemplate("#author-template", "beforeend", slide);
                   insertTemplate("#footer-template", "beforeend", slide);
+                  //, .content blockquote:first-child
+                  const EMOJI_REGEXP = /^\s*\(([^)]*)\)\s*(.*)/s;
+                  const contentElement = slide.querySelector(".content");
+                 
                   
-                  const emoji = slide.querySelector(".content h1:only-child mark, .content blockquote:only-child mark");
-                  if (emoji) {
-                      const div = document.createElement("div");
-                      div.classList.add("emoji");
-                      div.textContent = emoji.textContent;
-                      emoji.parentNode.remove();
-                      const content = slide.querySelector(".content");
-                      content.insertAdjacentElement("beforebegin", div);
+                  const h1 = slide.querySelector(".content h1:first-child");
+                  const h1Content = h1?.firstChild?.data;
+
+                  if (h1Content) {
+                      const match = h1Content.match(EMOJI_REGEXP);
+                      
+                      if (match) {
+                          const emoji = match[1];
+                          const div = document.createElement("div");
+                          div.classList.add("emoji");
+                          div.textContent = emoji;
+                          h1.remove();
+                          contentElement.insertAdjacentElement("beforebegin", div);
+                      }
+                  }
+
+                  const blockquoteParagraph = slide.querySelector(".content blockquote:first-child p");
+                  const blockquoteParagraphContent = blockquoteParagraph?.firstChild?.data;
+                  
+                  if (blockquoteParagraphContent) {
+                      const match = blockquoteParagraphContent.match(EMOJI_REGEXP);
+                  console.log(match)
+                      
+                      if (match) {
+                          const emoji = match[1];
+                          const txt = match[2];
+                          const div = document.createElement("div");
+                          div.classList.add("emoji");
+                          div.textContent = emoji;
+                          blockquoteParagraph.firstChild.replaceWith(txt);
+                          contentElement.insertAdjacentElement("beforebegin", div);
+                      }
+                  }
+                  
+              });
+              
+              document.querySelectorAll(".slide-grid ul li").forEach((li) => {
+                  const content = li.firstChild.data;
+                  const match = content.match(/^\s*\(([^):]*)(?::([a-z]+))?\)\s*(.*)/);
+                  if (match) {
+                      let marker = match[1];
+                      let modifier = match[2];
+                      let txt = match[3];
+
+                      switch (marker) {
+                        case "therefore": marker = "⇒"; break;
+                        case "finger": marker = "👉"; break;
+                        case "arrow": marker = "➜"; break;
+                        case "->": marker = "➜"; break;
+                        case "arrow": marker = "➜"; break;
+                        case "plus": marker = "+"; break;
+                        case "minus": marker = "−"; break;
+                        case "times": marker = "×"; break;
+                        case "check":
+                        case "success":
+                            marker = "✔";
+                            break;
+                        case "X":
+                        case "fail":
+                        case "failure":
+                            marker = "✘";
+                            break;
+                      }
+                      
+                      if (modifier) {
+                          li.classList.add("marker-" + modifier)
+                      }
+                      
+                      if (marker == "---") {
+                          li.classList.add("equals-line")
+                          li.textContent = "";
+                      } else if (marker == "") {
+                          li.firstChild.replaceWith(txt);
+                          li.dataset.markerContent = "";
+                      } else {
+                          li.firstChild.replaceWith(txt);
+                          li.dataset.markerContent = marker + " ";
+                      }
                   }
               });
+              
               
             });
         </script>

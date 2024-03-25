@@ -32,7 +32,7 @@ author:
 ![[unlockopen-slides/images/ospo.svg]]
 :::
 
-# == 🏁 ==
+# (🏁)
 # Title
 ## Subtitle
 
@@ -40,7 +40,7 @@ author:
 
 <!-- slide id="type-section" class="theme-blue theme-accent simple-slide" -->
 
-# == 🎬 ==
+# (🎬)
 # Section
 ## Subtitle
 
@@ -52,7 +52,7 @@ author:
 Chapter: Section
 :::
 
-# == 📽 ==
+# (📽)
 # Title
 ## Subtitle
 
@@ -83,7 +83,7 @@ Chapter: Section
 
 ::: left
 
-# == 📽📽 ==
+# (📽📽)
 # Title
 ## Subtitle
 
@@ -107,7 +107,7 @@ Source: statista
 Source: statista
 :::
 
-# == 💬 ==
+# (💬)
 # Simple
 ## Maybe a subtitle / text?
 
@@ -115,5 +115,5 @@ Source: statista
 
 <!-- slide id="type-aside" class="theme-blue simple-slide" -->
 
-# == 💭 ==
+# (💭)
 > Aside / Transition

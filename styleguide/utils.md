@@ -8,30 +8,31 @@ backgroundTransition: none
 
 #  Utils
 
-- 🤗 [Emoji list](#emoji-list)
-- ✅ [Check list](#check-list)
+- (🤗) [Emoji list](#emoji-list)
+- (✅) [Check list](#check-list)
 
 ---
 
 <!-- slide id="emoji-list"class="theme-lavender emoji-list" -->
 
-# == 🤗 ==
+# (🤗)
 #  Emoji list
 
-- 🐷 pink
-- 🍊 tangerine
-- 📷 golden
-- 🍏 apple
-- 🏝 caribbean
-- 🤿 aqua
+- (🐷) pink
+- (🍊) tangerine
+- (📷) golden
+- (🍏) apple
+- (🏝) caribbean
+- (🤿) aqua
 
 
 ---
 
 <!-- slide id="check-list" class="theme-apple check-list" -->
 
-# == ✅ ==
+# (✅)
 #  Check list
-- So…
-- many… 
-- …checks!
+- (✔) So…
+- (✔) many… 
+- (✔) …checks!
+- (X:failure) But sometimes you fail.

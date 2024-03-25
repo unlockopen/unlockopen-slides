@@ -8,17 +8,17 @@ backgroundTransition: none
 
 #  Shapes
 
-- ⛅️ [sun](#shape-sun)
-- 👨‍🎤 [tilted](#shape-tilted)
+- (⛅️) [sun](#shape-sun)
+- (👨‍🎤) [tilted](#shape-tilted)
 
 ---
 <!-- slide id="shape-sun"class="theme-golden shape-sun simple-slide" -->
 
-# == ⛅️ ==
+# (⛅️)
 #  Sun
 
 ---
 <!-- slide id="shape-tilted" class="theme-pink shape-tilted simple-slide" -->
 
-# == 👨‍🎤 ==
+# (👨‍🎤)
 #  Tilted
