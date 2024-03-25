@@ -573,7 +573,7 @@ html.print-pdf .reveal .slides section {
 
 .check-list ul li::marker {
   color: var(--color-accent);
-  content: "✓ ";
+  content: "✔ ";
 }
 
 .content-left .content {
