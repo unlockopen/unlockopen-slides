@@ -6,9 +6,9 @@
 </div>
 
 <div class="content">
+<div class="full-width"><% content %></div>
 <div class="left"><%? left %></div>
 <div class="right"><%? right %></div>
-<div class="full-width"><% content %></div>
 </div>
 
 <div class="bottom-left">
