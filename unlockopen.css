@@ -59,6 +59,8 @@
   --size-step-1: clamp(1.1875rem, 1.07rem + 0.57vw, 1.5rem);
   --size-step-2: clamp(1.4375rem, 1.28rem + 0.8vw, 1.875rem);
   --size-step-3: clamp(1.75rem, 1.55rem + 1.02vw, 2.3125rem);
+	--size-step-4: clamp(2.0625rem,1.77rem + 1.48vw,2.875rem);
+  --size-step-5: clamp(2.5rem,2.09rem + 2.05vw,3.625rem);
   --size-step-6: clamp(3rem, 2.45rem + 2.73vw, 4.5rem);
   --size-step-9: clamp(5.1875rem, 3.85rem + 6.7vw, 8.875rem);
   --leading-flat: 1;
@@ -138,7 +140,7 @@ section[data-markdown].theme-accent,
 .slide-background.theme-accent {
   --color-bg: var(--theme-color-dark);
   --color-accent: var(--theme-color-light);
-} 
+}
 
 /* Some of the darker accented teams need fine-tuning for contrast */
 .theme-pink.theme-accent,
@@ -421,7 +423,7 @@ div[class^="slide-grid"] {
   margin-bottom: var(--space-xs);
   font-size: var(--size-step-6);
   line-height: var(--leading-flat);
-  
+
 }
 
 .content {
@@ -461,7 +463,7 @@ div[class^="slide-grid"] {
   align-items: end;
   padding: 0.5rem;
   justify-self: center;
-  
+
 }
 
 .footer p {
