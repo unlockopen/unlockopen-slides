@@ -324,7 +324,7 @@
                   insertTemplate("#author-template", "beforeend", slide);
                   insertTemplate("#footer-template", "beforeend", slide);
                   
-                  const emoji = slide.querySelector(".content :first-child mark");
+                  const emoji = slide.querySelector(".content h1:first-child mark, .content blockquote:first-child mark");
                   if (emoji) {
                       const div = document.createElement("div");
                       div.classList.add("emoji");
