@@ -349,7 +349,6 @@
                   
                   if (blockquoteParagraphContent) {
                       const match = blockquoteParagraphContent.match(EMOJI_REGEXP);
-                  console.log(match)
                       
                       if (match) {
                           const emoji = match[1];
@@ -365,8 +364,9 @@
               });
               
               document.querySelectorAll(".slide-grid ul li").forEach((li) => {
-                  const content = li.firstChild.data;
-                  const match = content.match(/^\s*\(([^):]*)(?::([a-z]+))?\)\s*(.*)/);
+                  const content = li.firstChild?.data || "";
+                  console.log(content)
+                  const match = content.match(/^\s*\(([^):]*)(?::([a-z-_]+))?\)\s*(.*)/);
                   if (match) {
                       let marker = match[1];
                       let modifier = match[2];
@@ -393,7 +393,23 @@
                       }
                       
                       if (modifier) {
-                          li.classList.add("marker-" + modifier)
+                          if (modifier == "auto") {
+                              switch (marker) {
+                                case "🗓": modifier = "report-agenda"; break;
+                                case "🗺": modifier = "report-context"; break;
+                                case "🎯": modifier = "report-goals"; break;
+                                case "🔍": modifier = "report-findings"; break;
+                                case "💡": modifier = "report-insights"; break;
+                                case "👉": modifier = "report-recommendations"; break;
+                                case "🤝": modifier = "report-services"; break;
+                                case "⚖️": modifier = "report-legal"; break;
+                                case "✔": modifier = "success"; break;
+                                case "✘": modifier = "failure"; break;
+                                default: modifier = "unknown-auto-modifier";
+                              }
+                          }
+
+                          li.classList.add(modifier)
                       }
                       
                       if (marker == "---") {

@@ -598,11 +598,11 @@ html.print-pdf .reveal .slides section {
   content: attr(data-marker-content);
 }
 
-.reveal ul li[data-marker-content].marker-success::marker {
+.reveal ul li[data-marker-content].success::marker {
   color: var(--color-apple);
 }
 
-.reveal ul li[data-marker-content].marker-failure::marker {
+.reveal ul li[data-marker-content].failure::marker {
   color: var(--color-blush);
 }
 
@@ -685,6 +685,7 @@ section.shape-sun::after {
   --theme-color-dark: var(--color-apple);
 }
 
+.report-legal,
 .report-topic-lavender {
   --theme-color-light: var(--color-lavender-light);
   --theme-color-dark: var(--color-lavender);
@@ -705,6 +706,9 @@ section.shape-sun::after {
     .report-about,
     .report-title,
     .report-agenda,
+    .report-goals,
+    .report-legal,
+    .report-requirements,
     .report-summary,
     .report-services,
     .report-context,
@@ -719,9 +723,56 @@ section.shape-sun::after {
   content: "";
   position: absolute;
   top: -20%;
-  right: -80%;
+  right: -95%;
   width: 100%;
   height: 960px;
   background-color: var(--color-accent);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 15% 100%);
+}
+
+
+
+li:is(
+    .report-about,
+    .report-title,
+    .report-agenda,
+    .report-goals,
+    .report-legal,
+    .report-requirements,
+    .report-summary,
+    .report-services,
+    .report-context,
+    .report-methodology,
+    .report-recommendations,
+    .report-insights,
+    .report-findings,
+    .report-topic-pink,
+    .report-topic-blush,
+    .report-topic-lavender
+  ) {
+    position: relative;
+}
+
+li:is(
+    .report-about,
+    .report-title,
+    .report-agenda,
+    .report-goals,
+    .report-legal,
+    .report-requirements,
+    .report-summary,
+    .report-services,
+    .report-context,
+    .report-methodology,
+    .report-recommendations,
+    .report-insights,
+    .report-findings,
+    .report-topic-pink,
+    .report-topic-blush,
+    .report-topic-lavender
+  )::before {
+    height: 100%;
+    width: 7px;
+    top: 0;
+    left: -40px;
+    clip-path: none;
 }
