@@ -628,6 +628,18 @@ section.shape-sun::after {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
+/* default colors */
+:is([class^="section-"], [class^="topic-"]) {
+  --color-accent: var(--theme-color-dark);
+  --color-bg: var(--theme-color-light);
+}
+
+/* swapped colors for title */
+.section-title {
+  --color-accent: var(--theme-color-light) !important;
+  --color-bg: var(--theme-color-dark) !important;
+}
+
 .section-about,
 .section-report-title {
   --theme-color-light: var(--color-aqua-light);
@@ -636,8 +648,8 @@ section.shape-sun::after {
 
 .section-agenda,
 .section-summary {
-  --theme-color-light: var(--color-grey);
-  --theme-color-dark: var(--color-grey-light);
+  --theme-color-light: var(--color-grey-light);
+  --theme-color-dark: var(--color-grey);
 }
 
 .section-context,
@@ -681,6 +693,7 @@ section.shape-sun::after {
   --theme-color-dark: var(--color-pink);
 }
 
+/* VIP: shape */
 :is(
     .section-about,
     .section-report-title,
