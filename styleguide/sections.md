@@ -16,17 +16,17 @@ author:
 
 # Sections
 
-- [Report Title](section-title)
-- [About](section-about)
-- [Agenda](section-agenda)
-- [Context](section-context)
-- [Findings](section-findings)
-- [Insights](section-insights)
-- [Recommendations](section-recommendations)
-- [Services](section-services)
-- [Topic Lavender](topic-lavender)
-- [Topic Pink](topic-pink)
-- [Topic Blush](topic-blush)
+- [Report Title](#section-title)
+- [About](#section-about)
+- [Agenda](#section-agenda)
+- [Context](#section-context)
+- [Findings](#section-findings)
+- [Insights](#section-insights)
+- [Recommendations](#section-recommendations)
+- [Services](#section-services)
+- [Topic Lavender](#topic-lavender)
+- [Topic Pink](#topic-pink)
+- [Topic Blush](#topic-blush)
 
 ---
 
