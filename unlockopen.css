@@ -135,7 +135,9 @@ section[data-markdown],
 
 /* Set colors for the accented themes */
 section[data-markdown].theme-accent,
-.slide-background.theme-accent {
+.slide-background.theme-accent,
+section[data-markdown].section-title,
+.slide-background.section-title {
   --color-bg: var(--theme-color-dark);
   --color-accent: var(--theme-color-light);
 }
@@ -145,7 +147,12 @@ section[data-markdown].theme-accent,
 .theme-blush.theme-accent,
 .theme-aqua.theme-accent,
 .theme-blue.theme-accent,
-.theme-lavender.theme-accent {
+.theme-lavender.theme-accent,
+.theme-pink.section-title,
+.theme-blush.section-title,
+.theme-aqua.section-title,
+.theme-blue.section-title,
+.theme-lavender.section-title {
   --theme-color-subdued: color-mix(in oklab, var(--theme-color-light) 50%, var(--theme-color-dark));
 }
 
@@ -347,10 +354,12 @@ div[class^="slide-grid"] {
 }
 
 /* slide: title centered  */
-.simple-slide div[class="slide-grid"] {
+.simple-slide div[class="slide-grid"],
+.section-title div[class="slide-grid"] {
   grid-template-rows: [emoji] 40% [main-content] auto [bottom-content] max-content [footer] max-content;
 }
 
+.reveal .section-title p
 .reveal .simple-slide p {
   text-align: center;
 }
@@ -628,86 +637,82 @@ section.shape-sun::after {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
+
+
 /* default colors */
-:is([class^="section-"], [class^="topic-"]) {
+:is([class^="report-"]) {
   --color-accent: var(--theme-color-dark);
   --color-bg: var(--theme-color-light);
 }
 
-/* swapped colors for title */
-.section-title {
-  --color-accent: var(--theme-color-light) !important;
-  --color-bg: var(--theme-color-dark) !important;
-}
-
-.section-about,
-.section-report-title {
+.report-about,
+.report-title {
   --theme-color-light: var(--color-aqua-light);
   --theme-color-dark: var(--color-aqua);
 }
 
-.section-agenda,
-.section-summary {
+.report-agenda,
+.report-summary {
   --theme-color-light: var(--color-grey-light);
   --theme-color-dark: var(--color-grey);
 }
 
-.section-context,
-.section-methodology {
+.report-context,
+.report-methodology {
   --theme-color-light: var(--color-blue-light);
   --theme-color-dark: var(--color-blue);
 }
 
-.section-findings {
+.report-findings {
   --theme-color-light: var(--color-salmon-light);
   --theme-color-dark: var(--color-salmon);
 }
 
-.section-insights {
+.report-insights {
   --theme-color-light: var(--color-tangerine-light);
   --theme-color-dark: var(--color-tangerine);
 }
 
-.section-recommendations {
+.report-recommendations {
   --theme-color-light: var(--color-golden-light);
   --theme-color-dark: var(--color-golden);
 }
 
-.section-services {
+.report-services {
   --theme-color-light: var(--color-apple-light);
   --theme-color-dark: var(--color-apple);
 }
 
-.topic-lavender {
+.report-topic-lavender {
   --theme-color-light: var(--color-lavender-light);
   --theme-color-dark: var(--color-lavender);
 }
 
-.topic-blush {
+.report-topic-blush {
   --theme-color-light: var(--color-blush-light);
   --theme-color-dark: var(--color-blush);
 }
 
-.topic-pink {
+.report-topic-pink {
   --theme-color-light: var(--color-pink-light);
   --theme-color-dark: var(--color-pink);
 }
 
 /* VIP: shape */
 :is(
-    .section-about,
-    .section-report-title,
-    .section-agenda,
-    .section-summary,
-    .section-services,
-    .section-context,
-    .section-methodology,
-    .section-recommendations,
-    .section-insights,
-    .section-findings,
-    .topic-pink,
-    .topic-blush,
-    .topic-lavender
+    .report-about,
+    .report-title,
+    .report-agenda,
+    .report-summary,
+    .report-services,
+    .report-context,
+    .report-methodology,
+    .report-recommendations,
+    .report-insights,
+    .report-findings,
+    .report-topic-pink,
+    .report-topic-blush,
+    .report-topic-lavender
   )::before {
   content: "";
   position: absolute;

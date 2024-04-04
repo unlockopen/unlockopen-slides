@@ -16,21 +16,23 @@ author:
 
 # Sections
 
-- [Report Title](#section-title)
-- [About](#section-about)
-- [Agenda](#section-agenda)
-- [Context](#section-context)
-- [Findings](#section-findings)
-- [Insights](#section-insights)
-- [Recommendations](#section-recommendations)
-- [Services](#section-services)
+- [Report Title](#report-title)
+- [About](#report-about)
+- [Agenda](#report-agenda)
+- [Context](#report-context)
+- [Methodology](#report-methodology)
+- [Findings](#report-findings)
+- [Insights](#report-insights)
+- [Recommendations](#report-recommendations)
+- [Services](#report-services)
+- [Summary](#report-summary)
 - [Topic Lavender](#topic-lavender)
 - [Topic Pink](#topic-pink)
 - [Topic Blush](#topic-blush)
 
 ---
 
-<!-- slide id="section-title" class="simple-slide section-report-title section-title" -->
+<!-- slide id="report-title" class="section-title report-title" -->
 
 # Report Title
 
@@ -38,7 +40,7 @@ author:
 
 ---
 
-<!-- slide id="section-about" class="simple-slide section-about" -->
+<!-- slide id="report-about" class="report-about section-title" -->
 
 # Section about
 
@@ -46,103 +48,139 @@ author:
 
 ---
 
-<!-- slide id="section-agenda" class="simple-slide section-agenda section-title" -->
+<!-- slide id="report-agenda" class="report-agenda section-title" -->
 
+# (🗓)
 # Section Agenda
 
 ## Subtitle
 
 ---
 
-<!-- slide id="section-summary" class="simple-slide section-summary" -->
+<!-- slide id="report-agenda" class="report-agenda" -->
+
+# (🗓)
+# Agenda
+
+## Subtitle
+
+
+---
+
+<!-- slide id="report-context" class="report-context section-title" -->
+
+# (🗺)
+# Section Context
+
+## Subtitle
+
+---
+
+<!-- slide id="report-context-2" class="report-context simple-slide" -->
+
+# (🗺)
+# Section Context
+
+## Subtitle
+
+---
+
+<!-- slide id="report-methodology" class="report-context section-title" -->
+
+# Section Methodology
+
+## Subtitle
+
+---
+
+<!-- slide id="report-methodology-2" class="report-context simple-slide" -->
+
+# Section Methodology
+
+## Subtitle
+
+---
+
+<!-- slide id="report-findings" class="report-findings section-title" -->
+
+# (🔍)
+# Section Findings
+
+## Subtitle
+
+---
+
+<!-- slide id="report-findings-2" class="report-findings simple-slide" -->
+
+# (🔍)
+# Section Findings
+
+## Subtitle
+
+---
+
+<!-- slide id="report-insights" class="report-insights section-title" -->
+
+# (💡)
+# Section insights
+
+## Subtitle
+
+---
+
+<!-- slide id="report-insights-2" class="report-insights simple-slide" -->
+
+# (💡)
+# Section insights
+
+## Subtitle
+
+---
+
+<!-- slide id="report-recommendations" class="report-recommendations section-title" -->
+
+# (👉)
+# Section recommendations
+
+## Subtitle
+
+---
+
+<!-- slide id="report-recommendations-2" class="report-recommendations simple-slide" -->
+
+# (👉)
+# Section recommendations
+
+## Subtitle
+
+---
+
+<!-- slide id="report-services" class="report-services section-title" -->
+
+# Section services
+
+## Subtitle
+
+---
+
+<!-- slide id="report-services-2" class="report-services simple-slide" -->
+
+# Section services
+
+## Subtitle
+
+---
+
+<!-- slide id="report-summary" class="report-summary report-title" -->
 
 # Section Summary
 
 ## Subtitle
 
----
-
-<!-- slide id="section-context" class="simple-slide section-context section-title" -->
-
-# Section Context & Methodology
-
-## Subtitle
 
 ---
 
-<!-- slide id="section-context-2" class="simple-slide section-context" -->
-
-# Section Context & Methodology
-
-## Subtitle
-
----
-
-<!-- slide id="section-findings" class="simple-slide section-findings section-title" -->
-
-# Section Findings
-
-## Subtitle
-
----
-
-<!-- slide id="section-findings-2" class="simple-slide section-findings" -->
-
-# Section Findings
-
-## Subtitle
-
----
-
-<!-- slide id="section-insights" class="simple-slide section-insights section-title" -->
-
-# Section insights
-
-## Subtitle
-
----
-
-<!-- slide id="section-insights-2" class="simple-slide section-insights" -->
-
-# Section insights
-
-## Subtitle
-
----
-
-<!-- slide id="section-recommendations" class="simple-slide section-recommendations section-title" -->
-
-# Section recommendations
-
-## Subtitle
-
----
-
-<!-- slide id="section-recommendations-2" class="simple-slide section-recommendations" -->
-
-# Section recommendations
-
-## Subtitle
-
----
-
-<!-- slide id="section-services" class="simple-slide section-services section-title" -->
-
-# Section services
-
-## Subtitle
-
----
-
-<!-- slide id="section-services-2" class="simple-slide section-services" -->
-
-# Section services
-
-## Subtitle
-
----
-
-<!-- slide id="topic-lavender" class="simple-slide topic-lavender section-title" -->
+<!-- slide id="topic-lavender" class="report-topic-lavender section-title" -->
 
 # Topic Lavender
 
@@ -150,7 +188,7 @@ author:
 
 ---
 
-<!-- slide id="topic-lavender-2" class="simple-slide topic-lavender" -->
+<!-- slide id="topic-lavender-2" class="report-topic-lavender simple-slide" -->
 
 # Topic Lavender
 
@@ -158,7 +196,7 @@ author:
 
 ---
 
-<!-- slide id="topic-pink" class="simple-slide topic-pink section-title" -->
+<!-- slide id="topic-pink" class="report-topic-pink section-title" -->
 
 # Topic Pink
 
@@ -166,7 +204,7 @@ author:
 
 ---
 
-<!-- slide id="topic-pink-2" class="simple-slide topic-pink" -->
+<!-- slide id="topic-pink-2" class="report-topic-pink simple-slide" -->
 
 # Topic Pink
 
@@ -174,7 +212,7 @@ author:
 
 ---
 
-<!-- slide id="topic-blush" class="simple-slide topic-blush section-title" -->
+<!-- slide id="topic-blush" class="report-topic-blush section-title" -->
 
 # Topic Blush
 
@@ -182,7 +220,7 @@ author:
 
 ---
 
-<!-- slide id="topic-blush-2" class="simple-slide topic-blush" -->
+<!-- slide id="topic-blush-2" class="report-topic-blush simple-slide" -->
 
 # Topic Blush
 
