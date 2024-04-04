@@ -627,4 +627,36 @@ section.shape-sun::after {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
+.about,
+.report-title {
+    
+}
 
+.agenda, .summary {
+    /* neutral */
+}
+
+.context,
+.methodology {
+    
+}
+
+.findings {
+    
+}
+
+.insights {
+    
+}
+
+.recommendations {
+    
+}
+
+.services {
+    
+}
+
+.section-title {
+    
+}
