@@ -54,7 +54,7 @@ author:
 
 ---
 
-<!-- slide id="section-summary" class="simple-slide section-agenda" -->
+<!-- slide id="section-summary" class="simple-slide section-summary" -->
 
 # Section Summary
 
@@ -78,7 +78,7 @@ author:
 
 ---
 
-<!-- slide id="section-findings" class="simple-slide section-findings" -->
+<!-- slide id="section-findings" class="simple-slide section-findings section-title" -->
 
 # Section Findings
 
@@ -86,7 +86,15 @@ author:
 
 ---
 
-<!-- slide id="section-insights" class="simple-slide section-insights" -->
+<!-- slide id="section-findings-2" class="simple-slide section-findings" -->
+
+# Section Findings
+
+## Subtitle
+
+---
+
+<!-- slide id="section-insights" class="simple-slide section-insights section-title" -->
 
 # Section insights
 
@@ -94,7 +102,15 @@ author:
 
 ---
 
-<!-- slide id="section-recommendations" class="simple-slide section-recommendations" -->
+<!-- slide id="section-insights-2" class="simple-slide section-insights" -->
+
+# Section insights
+
+## Subtitle
+
+---
+
+<!-- slide id="section-recommendations" class="simple-slide section-recommendations section-title" -->
 
 # Section recommendations
 
@@ -102,7 +118,15 @@ author:
 
 ---
 
-<!-- slide id="section-services" class="simple-slide section-services" -->
+<!-- slide id="section-recommendations-2" class="simple-slide section-recommendations" -->
+
+# Section recommendations
+
+## Subtitle
+
+---
+
+<!-- slide id="section-services" class="simple-slide section-services section-title" -->
 
 # Section services
 
@@ -110,7 +134,15 @@ author:
 
 ---
 
-<!-- slide id="topic-lavender" class="simple-slide topic-lavender" -->
+<!-- slide id="section-services-2" class="simple-slide section-services" -->
+
+# Section services
+
+## Subtitle
+
+---
+
+<!-- slide id="topic-lavender" class="simple-slide topic-lavender section-title" -->
 
 # Topic Lavender
 
@@ -118,7 +150,15 @@ author:
 
 ---
 
-<!-- slide id="topic-pink" class="simple-slide topic-pink" -->
+<!-- slide id="topic-lavender-2" class="simple-slide topic-lavender" -->
+
+# Topic Lavender
+
+## Subtitle
+
+---
+
+<!-- slide id="topic-pink" class="simple-slide topic-pink section-title" -->
 
 # Topic Pink
 
@@ -126,7 +166,23 @@ author:
 
 ---
 
-<!-- slide id="topic-blush" class="simple-slide topic-blush" -->
+<!-- slide id="topic-pink-2" class="simple-slide topic-pink" -->
+
+# Topic Pink
+
+## Subtitle
+
+---
+
+<!-- slide id="topic-blush" class="simple-slide topic-blush section-title" -->
+
+# Topic Blush
+
+## Subtitle
+
+---
+
+<!-- slide id="topic-blush-2" class="simple-slide topic-blush" -->
 
 # Topic Blush
 
