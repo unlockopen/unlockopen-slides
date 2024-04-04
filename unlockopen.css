@@ -658,7 +658,9 @@ section.shape-sun::after {
 }
 
 .report-context,
-.report-methodology {
+.report-methodology,
+.report-goals,
+.report-requirements {
   --theme-color-light: var(--color-blue-light);
   --theme-color-dark: var(--color-blue);
 }
