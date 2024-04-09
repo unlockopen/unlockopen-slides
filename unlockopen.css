@@ -227,7 +227,7 @@ body {
   font-weight: var(--font-medium);
 }
 
-.reveal ul li::marker {
+.reveal ul > li::marker {
   content: "– ";
 }
 
