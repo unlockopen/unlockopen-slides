@@ -413,7 +413,7 @@ div[class^="slide-grid"] {
 
 .emoji {
   grid-row: emoji;
-  grid-column: 1 / -2;
+  grid-column: 1 / -1;
   justify-self: center;
   align-self: end;
   margin-bottom: var(--space-xs);
@@ -423,7 +423,7 @@ div[class^="slide-grid"] {
 
 .content {
   grid-row: main-content;
-  grid-column: 1 / -2;
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: subgrid;
   width: 830px;
@@ -436,13 +436,18 @@ div[class^="slide-grid"] {
   grid-column: 1 / -1;
 }
 
+.full-width > *:not(h1, h2) {
+  grid-column: 1 / -1;
+  max-inline-size: 50ch;
+}
+
 .left {
   grid-column: 1 / 4;
   text-align: left;
 }
 
 .right {
-  grid-column: 4 / -1;
+  grid-column: 4 / -2;
   text-align: left;
 }
 
