@@ -82,6 +82,8 @@
   --color-accent: var(--color-grey-dark);
   --theme-color-light: var(--color-grey-light);
   --theme-color-dark: var(--color-grey-dark);
+	--opacity-4: 0.4;
+	--opacity-3: 0.3;
 }
 
 .theme-pink {
@@ -130,7 +132,6 @@ section[data-markdown],
 .slide-background {
   --color-bg: var(--theme-color-light);
   --color-accent: var(--theme-color-dark);
-  --theme-color-subdued: color-mix(in oklab, var(--color-grey-dark) 50%, var(--color-bg));
 }
 
 /* Set colors for the accented themes */
@@ -142,19 +143,6 @@ section[data-markdown].section-title,
   --color-accent: var(--theme-color-light);
 }
 
-/* Some of the darker accented teams need fine-tuning for contrast */
-.theme-pink.theme-accent,
-.theme-blush.theme-accent,
-.theme-aqua.theme-accent,
-.theme-blue.theme-accent,
-.theme-lavender.theme-accent,
-.theme-pink.section-title,
-.theme-blush.section-title,
-.theme-aqua.section-title,
-.theme-blue.section-title,
-.theme-lavender.section-title {
-  --theme-color-subdued: color-mix(in oklab, var(--theme-color-light) 50%, var(--theme-color-dark));
-}
 
 /*********************************************
  * GLOBAL STYLES
@@ -476,7 +464,7 @@ div[class^="slide-grid"] {
 
 .footer p {
   margin: 0;
-  color: var(--theme-color-subdued);
+	opacity: var(--opacity-3);
   font-size: var(--size-step-min-2);
   text-align: center;
   line-height: var(--leading-fine);
@@ -512,20 +500,22 @@ div[class^="slide-grid"] {
   justify-items: end;
 }
 
-.bottom-left p,
-.bottom-right p,
-.bottom-left ol,
-.bottom-left li {
-  font-size: var(--size-step-min-1);
-  color: var(--theme-color-subdued);
-  font-weight: var(--font-regular);
+.bottom-left *,
+.bottom-right * {
   padding: 0;
   margin: 0;
+	font-weight: var(--font-regular);
   line-height: var(--leading-flat);
+	font-size: var(--size-step-min-1);
+}
+
+.bottom-left > *,
+.bottom-right > * {
+  opacity: var(--opacity-4);
 }
 
 .bottom-left ol {
-  margin: 0.2rem var(--space-xs);
+  margin-inline: var(--space-xs);
 }
 
 /* CURRENTLY NOT USED (broken)
