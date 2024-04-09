@@ -727,7 +727,9 @@ section.shape-sun::after {
 	.report-goals,
 	.report-legal,
 	.report-requirements,
-	.report-context) > svg {
+	.report-context,
+	report-methodology
+	) > svg {
 		top: -30%;
 		left: 87%;
 		width: auto;
