@@ -214,12 +214,11 @@ body {
 .reveal ol {
   text-align: left;
   line-height: var(--leading-standard);
-  padding-left: 17px;
 }
 
 .reveal h3 ~ ul,
-.reveal h3 ~ ul {
-  margin-top: 0;
+.reveal h3 ~ ol {
+  margin-top: var(--space-2xs);
 }
 
 .reveal li::marker {
