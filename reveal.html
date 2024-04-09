@@ -365,7 +365,6 @@
               
               document.querySelectorAll(".slide-grid ul li").forEach((li) => {
                   const content = li.firstChild?.data || "";
-                  console.log(content)
                   const match = content.match(/^\s*\(([^):]*)(?::([a-z-_]+))?\)\s*(.*)/);
                   if (match) {
                       let marker = match[1];
@@ -398,6 +397,7 @@
                                 case "🗓": modifier = "report-agenda"; break;
                                 case "🗺": modifier = "report-context"; break;
                                 case "🎯": modifier = "report-goals"; break;
+                                case "⚙️": modifier = "report-methodology"; break;
                                 case "🔍": modifier = "report-findings"; break;
                                 case "💡": modifier = "report-insights"; break;
                                 case "👉": modifier = "report-recommendations"; break;

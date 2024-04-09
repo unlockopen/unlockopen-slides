@@ -657,6 +657,7 @@ section.shape-sun::after {
   --theme-color-dark: var(--color-grey);
 }
 
+.report-background,
 .report-context,
 .report-methodology,
 .report-goals,
@@ -706,6 +707,7 @@ section.shape-sun::after {
     .report-about,
     .report-title,
     .report-agenda,
+    .report-background,
     .report-goals,
     .report-legal,
     .report-requirements,
@@ -735,6 +737,7 @@ li:is(
     .report-about,
     .report-title,
     .report-agenda,
+    .report-background,
     .report-goals,
     .report-legal,
     .report-requirements,
@@ -756,6 +759,7 @@ li:is(
     .report-about,
     .report-title,
     .report-agenda,
+    .report-background,
     .report-goals,
     .report-legal,
     .report-requirements,
@@ -773,6 +777,6 @@ li:is(
     height: 100%;
     width: 7px;
     top: 0;
-    left: -40px;
+    left: -50px;
     clip-path: none;
 }
