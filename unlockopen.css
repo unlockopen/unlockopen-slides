@@ -434,6 +434,7 @@ div[class^="slide-grid"] {
 
 .full-width {
   grid-column: 1 / -1;
+	max-inline-size: 50ch;
 }
 
 .left {
@@ -627,7 +628,6 @@ section.shape-sun::after {
 }
 
 
-
 /* default colors */
 :is([class^="report-"]) {
   --color-accent: var(--theme-color-dark);
@@ -651,8 +651,8 @@ section.shape-sun::after {
 .report-methodology,
 .report-goals,
 .report-requirements {
-  --theme-color-light: var(--color-blue-light);
-  --theme-color-dark: var(--color-blue);
+  --theme-color-light: var(--color-aqua-light);
+  --theme-color-dark: var(--color-aqua);
 }
 
 .report-findings {
@@ -691,34 +691,73 @@ section.shape-sun::after {
   --theme-color-dark: var(--color-pink);
 }
 
-/* VIP: shape */
-:is(
-    .report-about,
-    .report-title,
-    .report-agenda,
-    .report-background,
-    .report-goals,
-    .report-legal,
-    .report-requirements,
-    .report-summary,
-    .report-services,
-    .report-context,
-    .report-methodology,
-    .report-recommendations,
-    .report-insights,
-    .report-findings,
-    .report-topic-pink,
-    .report-topic-blush,
-    .report-topic-lavender
-  )::before {
-  content: "";
-  position: absolute;
-  top: -20%;
-  right: -95%;
-  width: 100%;
-  height: 960px;
-  background-color: var(--color-accent);
+.report-topic-blue {
+  --theme-color-light: var(--color-blue-light);
+  --theme-color-dark: var(--color-blue);
 }
+
+.report-topic-caribbean {
+  --theme-color-light: var(--color-caribbean-light);
+  --theme-color-dark: var(--color-caribbean);
+}
+
+/* Place SVG shapes */
+
+:is([class^="report-"] svg) {
+	position: absolute;
+	z-index: -1;
+}
+
+.report-title > svg {
+	top: -20%;
+	left: 15%;
+	width: 2000px;
+	height: auto;
+}
+
+.report-about > svg {
+	top: 40%;
+	left: 85%;
+	width: 700px;
+	height: auto;
+}
+
+:is(
+	.report-background,
+	.report-goals,
+	.report-legal,
+	.report-requirements,
+	.report-context) > svg {
+		top: -30%;
+		left: 87%;
+		width: auto;
+		height: 1200px;
+}
+
+:is(
+	.report-findings,
+	.report-insights,
+	.report-recommendations) > svg {
+		top: -40%;
+		left: 75%;
+		width: auto;
+		height: 1600px;
+}
+
+.report-services > svg {
+	top: 70%;
+	left: -35%;
+	width: 600px;
+	height: auto;
+}
+
+.report-summary > svg {
+	top: -60%;
+	left: 85%;
+	width: 800px;
+	height: auto;
+}
+
 
 
 
@@ -769,3 +808,4 @@ li:is(
     left: -50px;
     clip-path: none;
 }
+
