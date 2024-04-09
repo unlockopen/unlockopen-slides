@@ -437,7 +437,6 @@ div[class^="slide-grid"] {
 }
 
 .full-width > *:not(h1, h2) {
-  grid-column: 1 / -1;
   max-inline-size: 50ch;
 }
 
