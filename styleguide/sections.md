@@ -29,10 +29,20 @@ author:
 - [Topic Lavender](#topic-lavender)
 - [Topic Pink](#topic-pink)
 - [Topic Blush](#topic-blush)
+- [Topic Blue](#topic-blue)
+- [Topic Caribbean](#topic-caribbean)
 
 ---
 
-<!-- slide id="report-title" class="section-title report-title" -->
+<!-- slide id="report-title" class="report-title section-title" -->
+
+# Report Title
+
+## Subtitle
+
+---
+
+<!-- slide id="report-title-2" class="report-title simple-slide" -->
 
 # Report Title
 
@@ -48,7 +58,15 @@ author:
 
 ---
 
-<!-- slide id="report-agenda" class="report-agenda section-title" -->
+<!-- slide id="report-about-2" class="report-about simple-slide" -->
+
+# Section about
+
+## Subtitle
+
+---
+
+<!-- slide id="report-agenda" class="report-agenda simple-slide" -->
 
 # (🗓)
 # Section Agenda
@@ -171,12 +189,19 @@ author:
 
 ---
 
-<!-- slide id="report-summary" class="report-summary report-title" -->
+<!-- slide id="report-summary" class="report-summary section-title" -->
 
 # Section Summary
 
 ## Subtitle
 
+---
+
+<!-- slide id="report-summary-2" class="report-summary simple-slide" -->
+
+# Section Summary
+
+## Subtitle
 
 ---
 
@@ -223,5 +248,39 @@ author:
 <!-- slide id="topic-blush-2" class="report-topic-blush simple-slide" -->
 
 # Topic Blush
+
+## Subtitle
+
+---
+
+<!-- slide id="topic-blue" class="report-topic-blue section-title" -->
+
+# Topic Blue
+
+## Subtitle
+
+
+---
+
+<!-- slide id="topic-blue-2" class="report-topic-blue simple-slide" -->
+
+# Topic Blue
+
+## Subtitle
+
+---
+
+<!-- slide id="topic-caribbean" class="report-topic-caribbean section-title" -->
+
+# Topic Caribbean
+
+## Subtitle
+
+
+---
+
+<!-- slide id="topic-caribbean-2" class="report-topic-caribbean simple-slide" -->
+
+# Topic Caribbean
 
 ## Subtitle
