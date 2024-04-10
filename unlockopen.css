@@ -498,17 +498,19 @@ div[class^="slide-grid"] {
 .bottom-right {
   padding: var(--space-xs);
   grid-row: bottom-content;
-  grid-column: 1 / -1;
+
   display: grid;
   align-items: end;
 }
 
 .bottom-left {
   justify-items: start;
+	grid-column: 1 / 6;
 }
 
 .bottom-right {
   justify-items: end;
+	grid-column: 6 / -1;
 }
 
 .bottom-left *,
