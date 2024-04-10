@@ -498,9 +498,9 @@ div[class^="slide-grid"] {
 .bottom-right {
   padding: var(--space-xs);
   grid-row: bottom-content;
-
   display: grid;
   align-items: end;
+	align-content: end;
 }
 
 .bottom-left {
