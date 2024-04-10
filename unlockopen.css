@@ -557,6 +557,10 @@ html.print-pdf .reveal .slides section {
 
 /* modifier classes */
 
+.muted {
+  opacity: var(--opacity-4);
+}
+
 .hide-logo .logo {
   display: none;
 }

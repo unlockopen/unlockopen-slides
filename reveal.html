@@ -462,6 +462,16 @@
                   }
               });
 
+              // Mute content in "()" at the end of list items
+              document.querySelectorAll(".slide-grid li").forEach((li) => {
+                  const lastElement = li.lastElementChild;
+                  if (lastElement && lastElement.tagName == "EM"
+                      && lastElement.textContent.indexOf("(") == 0
+                      && lastElement.textContent.lastIndexOf(")") == lastElement.textContent.length - 1) {
+                      lastElement.classList.add("muted")
+                  }
+              });
+
 
 								// shapes
 									const shapeMappings = {
