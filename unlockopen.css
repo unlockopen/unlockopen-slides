@@ -250,11 +250,13 @@ body {
   font-style: italic;
 }
 
-h1 mark,
-h2 mark,
-h3 mark {
+:is(h1 , h2, h3) mark {
   background: none;
   color: var(--color-accent);
+}
+
+:is(.section-title, .report-title) :is(h1 , h2, h3) mark {
+  color: var(--color-light);
 }
 
 .reveal pre {
@@ -348,22 +350,27 @@ div[class^="slide-grid"] {
 
 .reveal .section-title p
 .reveal .simple-slide p {
+    margin: 0;
   text-align: center;
 }
 
-.simple-slide blockquote {
+.reveal .section-title blockquote,
+.reveal .simple-slide blockquote {
   border-inline-start: none;
   font-style: italic;
-  font-size: var(--size-step-2);
+  font-size: var(--size-step-6);
   padding-inline: 0;
   padding-block: 0;
   margin: 0;
   background-color: transparent;
   text-align: center;
-  line-height: var(--leading-fine);
+  line-height: var(--leading-flat);
+  margin-block: 0;
 }
 
-.simple-slide blockquote p {
+.reveal .section-slide blockquote p,
+.reveal .simple-slide blockquote p {
+  margin-block: 0;
   text-align: center;
 }
 
