@@ -59,6 +59,8 @@
   --size-step-1: clamp(1.1875rem, 1.07rem + 0.57vw, 1.5rem);
   --size-step-2: clamp(1.4375rem, 1.28rem + 0.8vw, 1.875rem);
   --size-step-3: clamp(1.75rem, 1.55rem + 1.02vw, 2.3125rem);
+  --size-step-4: clamp(2.0625rem,1.77rem + 1.48vw,2.875rem);
+  --size-step-5: clamp(2.5rem,2.09rem + 2.05vw,3.625rem);
   --size-step-6: clamp(3rem, 2.45rem + 2.73vw, 4.5rem);
   --size-step-9: clamp(5.1875rem, 3.85rem + 6.7vw, 8.875rem);
   --leading-flat: 1;
@@ -172,7 +174,7 @@ body {
 }
 
 .reveal h1 {
-  font-size: var(--size-step-6);
+  font-size: var(--size-step-5);
 }
 .reveal h2 {
   font-size: var(--size-step-3);
@@ -348,6 +350,14 @@ div[class^="slide-grid"] {
   grid-template-rows: [emoji] 40% [main-content] auto [bottom-content] max-content [footer] max-content;
 }
 
+.image-slide div[class="slide-grid"] {
+    grid-template-rows: [emoji] 20% [main-content] auto [bottom-content] max-content [footer] max-content;
+}
+
+.image-slide h1 {
+    font-size: var(--size-step-3);
+}
+
 .reveal .section-title p
 .reveal .simple-slide p {
     margin: 0;
@@ -358,7 +368,7 @@ div[class^="slide-grid"] {
 .reveal .simple-slide blockquote {
   border-inline-start: none;
   font-style: italic;
-  font-size: var(--size-step-6);
+  font-size: var(--size-step-3);
   padding-inline: 0;
   padding-block: 0;
   margin: 0;
@@ -405,13 +415,14 @@ div[class^="slide-grid"] {
 }
 
 .chapter p {
-  font-size: var(--size-step-min-2);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking);
-  font-weight: var(--font-semi-bold);
+  font-size: var(--size-step-2);
+  letter-spacing: var(--tracking-s);
+  line-height: var(--leading-flat);
   padding-right: 0.2rem;
   margin: 0;
+  margin-bottom: var(--space-s);
   text-align: right;
+  
 }
 
 .subbrand:empty + .chapter {
@@ -424,9 +435,15 @@ div[class^="slide-grid"] {
   justify-self: center;
   align-self: end;
   margin-bottom: var(--space-xs);
-  font-size: var(--size-step-6);
+  font-size: var(--size-step-5);
   line-height: var(--leading-flat);
 }
+
+
+.simple-slide .emoji {
+  font-size: var(--size-step-6);
+}
+
 
 .content {
   grid-row: main-content;
@@ -453,7 +470,7 @@ div[class^="slide-grid"] {
 }
 
 .right {
-  grid-column: 4 / -2;
+  grid-column: 4 / -1;
   text-align: left;
 }
 
@@ -462,6 +479,11 @@ div[class^="slide-grid"] {
 .full-width:empty {
   display: none;
 }
+
+:is(.left, .right, .full-width) :is(ul, ol, p):last-child {
+  margin-bottom: 0;
+}
+
 
 .footer {
   position: relative;
@@ -753,7 +775,8 @@ section.shape-sun::after {
 :is(
 	.report-findings,
 	.report-insights,
-	.report-recommendations) > svg {
+	.report-recommendations,
+    .report-topic-caribbean) > svg {
 		top: -40%;
 		left: 75%;
 		width: auto;
@@ -794,7 +817,8 @@ li:is(
     .report-findings,
     .report-topic-pink,
     .report-topic-blush,
-    .report-topic-lavender
+    .report-topic-lavender,
+    report-topic-caribbean
   ) {
     position: relative;
 }
@@ -816,7 +840,8 @@ li:is(
     .report-findings,
     .report-topic-pink,
     .report-topic-blush,
-    .report-topic-lavender
+    .report-topic-lavender,
+    .report-topic-caribbean
   )::before {
     height: 100%;
     width: 7px;
