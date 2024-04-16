@@ -257,7 +257,7 @@ body {
   color: var(--color-accent);
 }
 
-:is(.section-title, .report-title) :is(h1 , h2, h3) mark {
+:is(.section-title, .report-title, .report-lastpage) :is(h1 , h2, h3) mark {
   color: var(--color-light);
 }
 
@@ -674,7 +674,8 @@ section.shape-sun::after {
 }
 
 .report-about,
-.report-title {
+.report-title,
+.report-lastpage {
   --theme-color-light: var(--color-aqua-light);
   --theme-color-dark: var(--color-aqua);
 }
@@ -753,6 +754,18 @@ section.shape-sun::after {
 	height: auto;
 }
 
+.report-lastpage > svg {
+	top: -20%;
+	right: 15%;
+	width: 2000px;
+	height: auto;
+    transform: scaleX(-1);
+}
+
+.report-lastpage .logo {
+    --color-accent: var(--color-light);
+}
+
 .report-about > svg {
 	top: 40%;
 	left: 85%;
@@ -805,6 +818,7 @@ section.shape-sun::after {
 li:is(
     .report-about,
     .report-title,
+    .report-lastpage,
     .report-agenda,
     .report-background,
     .report-goals,
@@ -828,6 +842,7 @@ li:is(
 li:is(
     .report-about,
     .report-title,
+    .report-lastpage,
     .report-agenda,
     .report-background,
     .report-goals,
