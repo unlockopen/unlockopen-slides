@@ -356,6 +356,10 @@ div[class^="slide-grid"] {
     grid-template-rows: [emoji] 20% [main-content] auto [bottom-content] max-content [footer] max-content;
 }
 
+.report-lastpage div[class="slide-grid"] {
+	grid-template-rows: [emoji] 50% [main-content] auto [bottom-content] max-content [footer] max-content;
+}
+
 .image-slide h1 {
     font-size: var(--size-step-3);
 }
@@ -767,6 +771,13 @@ section.shape-sun::after {
 
 .report-lastpage .logo {
     --color-accent: var(--color-light);
+		grid-row: emoji;
+		grid-column: 1 / -1;
+		justify-self: center;
+		align-self: end;
+		margin-bottom: var(--space-xs);
+		left: auto;
+		width: 20rem;
 }
 
 .report-about > svg {
