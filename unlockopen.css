@@ -812,7 +812,10 @@ section.shape-sun::after {
 		height: 1600px;
 }
 
-.report-services > svg {
+:is(
+    .report-services,
+    .report-topic-blue,
+    .report-topic-pink) > svg {
 	top: 70%;
 	left: -35%;
 	width: 600px;
