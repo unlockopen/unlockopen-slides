@@ -471,6 +471,10 @@ div[class^="slide-grid"] {
   max-inline-size: 50ch;
 }
 
+.simple-slide .full-width > * {
+  max-inline-size: none;
+}
+
 .left {
   grid-column: 1 / 4;
   text-align: left;
@@ -800,6 +804,7 @@ section.shape-sun::after {
 		width: auto;
 		height: 1200px;
 }
+
 
 :is(
 	.report-findings,
