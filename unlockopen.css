@@ -781,7 +781,7 @@ section.shape-sun::after {
 		align-self: end;
 		margin-bottom: var(--space-xs);
 		left: auto;
-		width: 20rem;
+		width: 16rem;
 }
 
 .report-about > svg {
