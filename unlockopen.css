@@ -357,7 +357,7 @@ div[class^="slide-grid"] {
 }
 
 .report-lastpage div[class="slide-grid"] {
-	grid-template-rows: [emoji] 50% [main-content] auto [bottom-content] max-content [footer] max-content;
+	grid-template-rows: [emoji] 60% [main-content] auto [bottom-content] max-content [footer] max-content;
 }
 
 .image-slide h1 {
