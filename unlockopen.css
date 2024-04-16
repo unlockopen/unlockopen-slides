@@ -519,19 +519,21 @@ div[class^="slide-grid"] {
 
 .bottom-left,
 .bottom-right {
-  padding: var(--space-xs);
+  padding-block: var(--space-xs);
   grid-row: bottom-content;
-  grid-column: 1 / -1;
   display: grid;
   align-items: end;
+	align-content: end;
 }
 
 .bottom-left {
   justify-items: start;
+	grid-column: 1 / 6;
 }
 
 .bottom-right {
   justify-items: end;
+	grid-column: 6 / -1;
 }
 
 .bottom-left *,
