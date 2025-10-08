@@ -212,6 +212,10 @@ body {
   margin-top: var(--space-2xs);
 }
 
+.reveal li {
+    padding-left: var(--space-2xs);
+}
+
 .reveal li::marker {
   color: var(--color-accent);
   font-weight: var(--font-medium);
@@ -258,7 +262,7 @@ body {
   color: var(--color-accent);
 }
 
-:is(.section-title, .report-title, .report-lastpage) :is(h1 , h2, h3) mark {
+:is(.section-title, .report-title, .report-title-salmon, .report-lastpage) :is(h1 , h2, h3) mark {
   color: var(--color-light);
 }
 
@@ -356,11 +360,21 @@ div[class^="slide-grid"] {
     grid-template-rows: [emoji] 20% [main-content] auto [bottom-content] max-content [footer] max-content;
 }
 
+.mermaid-slide div[class="slide-grid"] {
+    grid-template-rows: [emoji] 5% [main-content] auto [bottom-content] max-content [footer] max-content;
+}
+
 .report-lastpage div[class="slide-grid"] {
 	grid-template-rows: [emoji] 60% [main-content] auto [bottom-content] max-content [footer] max-content;
 }
 
+.mermaid-slide h1,
 .image-slide h1 {
+    font-size: var(--size-step-3);
+    margin-bottom: 0;
+}
+
+.section-overview {
     font-size: var(--size-step-3);
 }
 
@@ -421,13 +435,14 @@ div[class^="slide-grid"] {
 }
 
 .chapter p {
-  font-size: var(--size-step-2);
+  font-size: var(--size-step-min-1);
   letter-spacing: var(--tracking-s);
   line-height: var(--leading-flat);
   padding-right: 0.2rem;
   margin: 0;
   margin-bottom: var(--space-s);
   text-align: right;
+  opacity: var(--opacity-4);
 
 }
 
@@ -445,11 +460,19 @@ div[class^="slide-grid"] {
   line-height: var(--leading-flat);
 }
 
+.full-width > div.mermaid {
+    max-inline-size: max-content;
+    max-width: 100%;
+}
+
+div.mermaid svg {
+    position: relative;
+}
+
 
 .simple-slide .emoji {
   font-size: var(--size-step-6);
 }
-
 
 .content {
   grid-row: main-content;
@@ -465,6 +488,8 @@ div[class^="slide-grid"] {
 .full-width {
   grid-column: 1 / -1;
 	margin-left: var(--logo-icon);
+    margin-right: var(--logo-icon);
+    margin-bottom: 0
 }
 
 .full-width > *:not(h1, h2) {
@@ -495,7 +520,6 @@ div[class^="slide-grid"] {
 :is(.left, .right, .full-width) :is(ul, ol, p):last-child {
   margin-bottom: 0;
 }
-
 
 .footer {
   position: relative;
@@ -679,7 +703,7 @@ section.shape-sun::after {
 
 
 /* default colors */
-:is([class^="report-"]) {
+:is([class*="report-"]) {
   --color-accent: var(--theme-color-dark);
   --color-bg: var(--theme-color-light);
 }
@@ -706,6 +730,8 @@ section.shape-sun::after {
   --theme-color-dark: var(--color-aqua);
 }
 
+.report-topic-salmon,
+.report-title-salmon,
 .report-findings {
   --theme-color-light: var(--color-salmon-light);
   --theme-color-dark: var(--color-salmon);
@@ -754,10 +780,12 @@ section.shape-sun::after {
 
 /* Place SVG shapes */
 
-:is([class^="report-"] svg) {
+:is([class*="report-"] svg, [class*="shape-"] svg) {
 	position: absolute;
 }
 
+
+.report-title-salmon > svg,
 .report-title > svg {
 	top: -20%;
 	left: 15%;
@@ -773,6 +801,11 @@ section.shape-sun::after {
     transform: scaleX(-1);
 }
 
+
+.report-title-salmon .logo {
+    --color-text: var(--color-light);
+}
+
 .report-lastpage .logo {
     --color-accent: var(--color-light);
 		grid-row: emoji;
@@ -784,7 +817,10 @@ section.shape-sun::after {
 		width: 16rem;
 }
 
-.report-about > svg {
+:is(
+    .report-about,
+    .shape-rectangle
+    ) > svg {
 	top: 40%;
 	left: 85%;
 	width: 700px;
@@ -792,6 +828,7 @@ section.shape-sun::after {
 }
 
 :is(
+    .shape-rectangle,
 	.report-background,
 	.report-goals,
 	.report-legal,
@@ -805,12 +842,13 @@ section.shape-sun::after {
 		height: 1200px;
 }
 
-
 :is(
 	.report-findings,
 	.report-insights,
 	.report-recommendations,
-    .report-topic-caribbean) > svg {
+    .report-topic-caribbean,
+    .report-topic-salmon
+    ) > svg {
 		top: -40%;
 		left: 75%;
 		width: auto;
@@ -818,6 +856,7 @@ section.shape-sun::after {
 }
 
 :is(
+    .report-topic-lavender,
     .report-services,
     .report-topic-blue,
     .report-topic-pink) > svg {
@@ -838,8 +877,10 @@ section.shape-sun::after {
 
 
 li:is(
+    .shape-rectangle,
     .report-about,
     .report-title,
+    .report-title-salmon,
     .report-lastpage,
     .report-agenda,
     .report-background,
@@ -856,14 +897,17 @@ li:is(
     .report-topic-pink,
     .report-topic-blush,
     .report-topic-lavender,
-    report-topic-caribbean
+    .report-topic-salmon,
+    .report-topic-caribbean
   ) {
     position: relative;
 }
 
 li:is(
+    .shape-rectangle,
     .report-about,
     .report-title,
+    .report-title-salmon,
     .report-lastpage,
     .report-agenda,
     .report-background,
@@ -880,6 +924,7 @@ li:is(
     .report-topic-pink,
     .report-topic-blush,
     .report-topic-lavender,
+    .report-topic-salmon,
     .report-topic-caribbean
   )::before {
     height: 100%;

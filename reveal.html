@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <title>{{{title}}}</title>
+    <title>{{#id}}unlockopen-{{id}}{{/id}}</title>
     <link rel="stylesheet" href="{{{base}}}dist/reveal.css" />
     <link rel="stylesheet" href="{{{base}}}{{{themeUrl}}}" id="theme" />
     <link rel="stylesheet" href="{{{base}}}{{{highlightThemeUrl}}}" />
@@ -246,7 +246,7 @@
 		  mangle: true,
 		  pedantic: false,
 		  smartLists: false,
-		  smartypants: false,
+		  smartypants: true,
 		},
 
 		mermaid: {
@@ -326,9 +326,18 @@
                           {{title}}
                           {{#id}} ({{id}}){{/id}}
                       {{/title}}
+                      {{#date}}
+                          – {{date}}
+                      {{/date}}
+                      – <span class="current-slide-number"></span>/<span class="total-slide-number"></span>
                       {{#copyright}} – Copyright {{year}} {{owner}}.
                               {{#license}}
-                                  {{license}}.
+                                  {{#url}}
+                                      – <a href="{{url}}">{{license}}</a>
+                                  {{/url}}
+                                  {{^url}}
+                                  – {{license}}
+                                  {{/url}}
                               {{/license}}
                               {{^license}}
                                   All rights reserved.
@@ -347,19 +356,26 @@
 
         <script>
             Reveal.initialize(options).then(_ => {
-              document.querySelectorAll(".slide-grid").forEach((slide) => {
-
-                  function insertTemplate(id, position, parent) {
+              const slides = document.querySelectorAll(".slide-grid");
+              slides.forEach((slide, i) => {
+                  function insertTemplate(id, position, parent, callback) {
                       const template = document.querySelector(id);
                       if (template) {
                           clone = template.content.cloneNode(true);
+                          if (callback) {
+                              callback(clone);
+                          }
                           parent.insertAdjacentElement(position, ...clone.children);
                       }
                   }
 
                   insertTemplate("#logo-template", "afterbegin", slide);
                   insertTemplate("#author-template", "beforeend", slide);
-                  insertTemplate("#footer-template", "beforeend", slide);
+                  insertTemplate("#footer-template", "beforeend", slide, (footer) => {
+                      footer.querySelector("span.current-slide-number").textContent = i + 1;
+                      footer.querySelector("span.total-slide-number").textContent = slides.length;
+                  });
+
                   //, .content blockquote:first-child
                   const EMOJI_REGEXP = /^\s*\(([^)]*)\)\s*(.*)/s;
                   const contentElement = slide.querySelector(".content");
@@ -476,6 +492,7 @@
 								// shapes
 									const shapeMappings = {
 										"report-title": "#shape-bullet",
+										"report-title-salmon": "#shape-bullet",
 										"report-lastpage": "#shape-bullet",
 										"report-about": "#shape-blob",
 										"report-background": "#shape-rectangle",
@@ -491,10 +508,18 @@
 										"report-summary": "#shape-oval",
 										"report-topic-caribbean": "#shape-tilted",
 										"report-topic-blue": "#shape-oval",
-										"report-topic-pink": "#shape-oval"
+										"report-topic-pink": "#shape-oval",
+										"report-topic-salmon": "#shape-oval",
+										"report-topic-lavender": "#shape-oval",
+                                        "shape-rectangle":  "#shape-rectangle",
+                                        "shape-oval":  "#shape-oval",
+                                        "shape-tilted":  "#shape-tilted",
+										"report-blob": "#shape-blob",
+										"report-bullet": "#shape-bullet"
+                                        
 									};
 
-									document.querySelectorAll('section[class*="report-"]').forEach(section => {
+									document.querySelectorAll(':is(section[class*="report-"], section[class*="shape-"]').forEach(section => {
 										Object.entries(shapeMappings).forEach(([className, shapeId]) => {
 											if (section.classList.contains(className)) {
 												const svgTemplate = document.querySelector(shapeId);
