@@ -42,7 +42,9 @@ function generateTokenCSS() {
   // Text sizes
   css += '\n  /* Text Sizes */\n';
   Object.entries(tokensToTailwind(clampGenerator(textSizes.items))).forEach(([key, value]) => {
-    css += `  --size-step-${key}: ${value};\n`;
+    // Remove 'step-' prefix if it exists since we're adding '--size-step-'
+    const cleanKey = key.startsWith('step-') ? key.slice(5) : key;
+    css += `  --size-step-${cleanKey}: ${value};\n`;
   });
 
   // Typography

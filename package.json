@@ -5,6 +5,7 @@
   "description": "UnlockOpen presentation slides with design token integration",
   "scripts": {
     "build:tokens": "node build-tokens.js",
+    "build": "node build.js",
     "watch:tokens": "nodemon --watch node_modules/unlockopen-design-tokens --exec 'npm run build:tokens'"
   },
   "dependencies": {
