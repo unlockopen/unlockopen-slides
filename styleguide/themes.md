@@ -46,7 +46,7 @@ author:
 
 <!-- slide id="theme-pink" class="theme-pink simple-slide" -->
 # (🐷)
-# pink) accent)
+# pink
 Background: \#f9f0f6 • Accent: \#c766a1
 
 ---
@@ -199,6 +199,6 @@ Background: \#f5f1f9 • Accent: \#966fc4
 
 
 # (🐝🐝🐝)
-# accent) lavender)
+# accent lavender
 Background: \#966fc4 • Accent: \#f5f1f9
 

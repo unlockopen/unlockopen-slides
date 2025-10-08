@@ -3,7 +3,6 @@ theme: [[unlockopen-slides/unlockopen.css]]
 defaultTemplate: "[[slide-base]]"
 backgroundTransition: none
 ---
-
 <!-- slide id="shapes-index" class="theme-golden" -->
 
 #  Shapes

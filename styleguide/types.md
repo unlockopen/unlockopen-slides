@@ -44,6 +44,9 @@ author:
 # Section
 ## Subtitle
 
+
+Here's a simple footnote[^zig]
+
 ---
 
 <!-- slide id="type-standard" class="theme-blue" -->
@@ -51,6 +54,7 @@ author:
 ::: chapter
 Chapter: Section
 :::
+
 
 # (📽)
 # Title
@@ -61,13 +65,13 @@ Has some text (should be left-aligned)
 - maybe bullets
 - bullets
 
-Here's a simple footnote[^1]
+Here's a simple footnote[^boo]
 
-[^1]: meaningful!
+Here's a simple footnote[^bar]
 
-::: aside
-\*and here's a note
-:::
+[^boo]: meaningful!
+[^bar]: not!
+
 
 
 ---
