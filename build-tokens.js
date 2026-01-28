@@ -81,10 +81,24 @@ function main() {
 
     const css = generateTokenCSS();
 
+    // Write to root for legacy build
     fs.writeFileSync('./tokens-generated.css', css);
 
-    console.log('✅ Generated CSS custom properties at tokens-generated.css');
-    console.log('📋 Build system will copy this to the final location');
+    // Also write to styles directory for standalone app
+    const stylesDir = './styles';
+    if (!fs.existsSync(stylesDir)) {
+      fs.mkdirSync(stylesDir, { recursive: true });
+    }
+    fs.writeFileSync('./styles/tokens-generated.css', css);
+
+    // Copy unlockopen.css to styles if not already there
+    if (fs.existsSync('./unlockopen.css') && !fs.existsSync('./styles/unlockopen.css')) {
+      fs.copyFileSync('./unlockopen.css', './styles/unlockopen.css');
+    }
+
+    console.log('✅ Generated CSS custom properties');
+    console.log('   - ./tokens-generated.css (legacy)');
+    console.log('   - ./styles/tokens-generated.css (standalone)');
 
   } catch (error) {
     console.error('❌ Error generating tokens:', error);
