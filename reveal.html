@@ -6,7 +6,8 @@
 
     <title>{{#id}}unlockopen-{{id}}{{/id}}</title>
     <link rel="stylesheet" href="{{{base}}}dist/reveal.css" />
-    <link rel="stylesheet" href="{{{base}}}{{{themeUrl}}}" id="theme" />
+    <link rel="stylesheet" href="{{{base}}}unlockopen-slides/tokens-generated.css" />
+    <link rel="stylesheet" href="{{{base}}}unlockopen-slides/unlockopen.css" id="theme" />
     <link rel="stylesheet" href="{{{base}}}{{{highlightThemeUrl}}}" />
 	<link rel="stylesheet" href="{{{base}}}css/layout.css" />
 	{{#enableCustomControls}}
@@ -23,6 +24,15 @@
 	{{#cssPaths}}
     <link rel="stylesheet" href="{{{base}}}{{{.}}}" />
     {{/cssPaths}}
+
+	{{#theme}}
+	<style>
+	:root {
+		--theme-color-light: var(--color-{{{theme}}}-light);
+		--theme-color-dark: var(--color-{{{theme}}});
+	}
+	</style>
+	{{/theme}}
 
     <script defer src="{{{base}}}dist/fontawesome/all.min.js"></script>
 
@@ -126,6 +136,11 @@
 			</svg>
 		</template>
 
+		<template id="shape-sun">
+			<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="400" cy="400" r="400" fill="var(--color-accent)"/>
+			</svg>
+		</template>
 
 
     <div class="reveal">
@@ -514,12 +529,36 @@
                                         "shape-rectangle":  "#shape-rectangle",
                                         "shape-oval":  "#shape-oval",
                                         "shape-tilted":  "#shape-tilted",
+                                        "shape-blob": "#shape-blob",
+                                        "shape-bullet": "#shape-bullet",
+                                        "shape-sun": "#shape-sun",
 										"report-blob": "#shape-blob",
 										"report-bullet": "#shape-bullet"
-                                        
 									};
 
-									document.querySelectorAll(':is(section[class*="report-"], section[class*="shape-"]').forEach(section => {
+									// Layout classes with default shapes (skipped if explicit shape-* class is present)
+									const defaultShapes = {
+										"layout-cover": "#shape-bullet",
+										"layout-back": "#shape-bullet"
+									};
+
+									document.querySelectorAll(':is(section[class*="report-"], section[class*="shape-"], section[class*="cover"], section[class*="layout-"])').forEach(section => {
+										const hasExplicitShape = [...section.classList].some(c => c.startsWith('shape-'));
+
+										// Inject default shapes for layout classes (unless overridden by explicit shape-*)
+										if (!hasExplicitShape) {
+											Object.entries(defaultShapes).forEach(([className, shapeId]) => {
+												if (section.classList.contains(className)) {
+													const svgTemplate = document.querySelector(shapeId);
+													if (svgTemplate) {
+														const clone = svgTemplate.content.cloneNode(true);
+														section.appendChild(clone);
+													}
+												}
+											});
+										}
+
+										// Inject shapes from explicit mappings
 										Object.entries(shapeMappings).forEach(([className, shapeId]) => {
 											if (section.classList.contains(className)) {
 												const svgTemplate = document.querySelector(shapeId);

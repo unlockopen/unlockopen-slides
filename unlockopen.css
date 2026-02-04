@@ -1,9 +1,4 @@
-/**
-  [ unlockopen ]
-*/
-
 @import url(https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap);
-@import url('./tokens-generated.css');
 
 /* Box sizing rules */
 *,
@@ -42,7 +37,9 @@ section[data-markdown],
 section[data-markdown].theme-accent,
 .slide-background.theme-accent,
 section[data-markdown].section-title,
-.slide-background.section-title {
+.slide-background.section-title,
+section[data-markdown].layout-section,
+.slide-background.layout-section {
   --color-bg: var(--theme-color-dark);
   --color-accent: var(--theme-color-light);
 }
@@ -163,7 +160,7 @@ body {
   color: var(--color-accent);
 }
 
-:is(.section-title, .report-title, .report-title-salmon, .report-lastpage) :is(h1 , h2, h3) mark {
+:is(.section-title, .layout-section, .report-title, .report-title-salmon, .report-lastpage) :is(h1 , h2, h3) mark {
   color: var(--color-light);
 }
 
@@ -253,40 +250,53 @@ div[class^="slide-grid"] {
 
 /* slide: title centered  */
 .simple-slide div[class="slide-grid"],
-.section-title div[class="slide-grid"] {
+.layout-headline div[class="slide-grid"],
+.section-title div[class="slide-grid"],
+.layout-section div[class="slide-grid"],
+.layout-cover div[class="slide-grid"] {
   grid-template-rows: [emoji] 40% [main-content] auto [bottom-content] max-content [footer] max-content;
 }
 
-.image-slide div[class="slide-grid"] {
+.image-slide div[class="slide-grid"],
+.layout-image div[class="slide-grid"] {
     grid-template-rows: [emoji] 20% [main-content] auto [bottom-content] max-content [footer] max-content;
 }
 
-.mermaid-slide div[class="slide-grid"] {
+.mermaid-slide div[class="slide-grid"],
+.layout-mermaid div[class="slide-grid"] {
     grid-template-rows: [emoji] 5% [main-content] auto [bottom-content] max-content [footer] max-content;
 }
 
-.report-lastpage div[class="slide-grid"] {
+.report-lastpage div[class="slide-grid"],
+.layout-back div[class="slide-grid"] {
 	grid-template-rows: [emoji] 60% [main-content] auto [bottom-content] max-content [footer] max-content;
 }
 
 .mermaid-slide h1,
-.image-slide h1 {
+.layout-mermaid h1,
+.image-slide h1,
+.layout-image h1 {
     font-size: var(--size-step-3);
     margin-bottom: 0;
 }
 
-.section-overview {
+.section-overview,
+.layout-toc {
     font-size: var(--size-step-3);
 }
 
-.reveal .section-title p
-.reveal .simple-slide p {
+.reveal .section-title p,
+.reveal .layout-section p,
+.reveal .simple-slide p,
+.reveal .layout-headline p {
     margin: 0;
   text-align: center;
 }
 
 .reveal .section-title blockquote,
-.reveal .simple-slide blockquote {
+.reveal .layout-section blockquote,
+.reveal .simple-slide blockquote,
+.reveal .layout-headline blockquote {
   border-inline-start: none;
   font-style: italic;
   font-size: var(--size-step-3);
@@ -300,9 +310,39 @@ div[class^="slide-grid"] {
 }
 
 .reveal .section-slide blockquote p,
-.reveal .simple-slide blockquote p {
+.reveal .section-title blockquote p,
+.reveal .layout-section blockquote p,
+.reveal .simple-slide blockquote p,
+.reveal .layout-headline blockquote p {
   margin-block: 0;
   text-align: center;
+}
+
+/* cover slide: right-aligned text */
+.reveal .layout-cover :is(h1, h2, h3, p) {
+  text-align: right;
+}
+
+.reveal .layout-cover h1 {
+  color: var(--color-light);
+}
+
+.reveal .layout-cover blockquote {
+  border-inline-start: none;
+  font-style: italic;
+  font-size: var(--size-step-3);
+  padding-inline: 0;
+  padding-block: 0;
+  margin: 0;
+  background-color: transparent;
+  text-align: right;
+  line-height: var(--leading-flat);
+  margin-block: 0;
+}
+
+.reveal .layout-cover blockquote p {
+  margin-block: 0;
+  text-align: right;
 }
 
 /* ----------------- layout zones -----------------  */
@@ -371,7 +411,9 @@ div.mermaid svg {
 }
 
 
-.simple-slide .emoji {
+.simple-slide .emoji,
+.layout-headline .emoji,
+.layout-cover .emoji {
   font-size: var(--size-step-6);
 }
 
@@ -397,7 +439,9 @@ div.mermaid svg {
   max-inline-size: 50ch;
 }
 
-.simple-slide .full-width > * {
+.simple-slide .full-width > *,
+.layout-headline .full-width > *,
+.layout-cover .full-width > * {
   max-inline-size: none;
 }
 
@@ -579,29 +623,6 @@ html.print-pdf .reveal .slides section {
   text-shadow: 0 0 0.5rem var(--color-text);
 }
 
-section.shape-tilted::before {
-  content: "";
-  position: absolute;
-  top: -20%;
-  right: -60%;
-  width: 100%;
-  height: 960px;
-  background-color: var(--color-accent);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 15% 100%);
-}
-
-section.shape-sun::after {
-  content: "";
-  position: absolute;
-  top: -40%;
-  right: -45%;
-  width: 80%;
-  height: 80%;
-  background-color: var(--color-accent);
-  border-radius: 50%;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-}
-
 
 /* default colors */
 :is([class*="report-"]) {
@@ -681,11 +702,54 @@ section.shape-sun::after {
 
 /* Place SVG shapes */
 
-:is([class*="report-"] svg, [class*="shape-"] svg) {
+:is([class*="report-"] svg, [class*="shape-"] svg, [class*="layout-cover"] svg, [class*="layout-back"] svg) {
 	position: absolute;
 }
 
+/* Standalone shape positioning defaults */
+.shape-oval > svg {
+	top: 70%;
+	left: -35%;
+	width: 600px;
+	height: auto;
+}
 
+.shape-tilted > svg {
+	top: -40%;
+	left: 75%;
+	width: auto;
+	height: 1600px;
+}
+
+.shape-rectangle > svg {
+	top: -30%;
+	left: 87%;
+	width: auto;
+	height: 1200px;
+}
+
+.shape-bullet > svg {
+	top: -20%;
+	left: 15%;
+	width: 2000px;
+	height: auto;
+}
+
+.shape-blob > svg {
+	top: 40%;
+	left: 85%;
+	width: 700px;
+	height: auto;
+}
+
+.shape-sun > svg {
+	top: -60%;
+	right: -60%;
+	width: 800px;
+	height: auto;
+}
+
+/* Report-specific shape positioning overrides */
 .report-title-salmon > svg,
 .report-title > svg {
 	top: -20%;
@@ -702,6 +766,21 @@ section.shape-sun::after {
     transform: scaleX(-1);
 }
 
+.layout-cover > svg {
+	top: -20%;
+	left: 15%;
+	width: 2000px;
+	height: auto;
+}
+
+.layout-back > svg {
+	top: -20%;
+	right: 15%;
+	width: 2000px;
+	height: auto;
+	left: auto;
+	transform: scaleX(-1);
+}
 
 .report-title-salmon .logo {
     --color-text: var(--color-light);
@@ -718,10 +797,22 @@ section.shape-sun::after {
 		width: 16rem;
 }
 
-:is(
-    .report-about,
-    .shape-rectangle
-    ) > svg {
+.theme-accent.layout-cover .logo {
+	--color-text: var(--color-light);
+}
+
+.layout-back .logo {
+	--color-accent: var(--color-light);
+	grid-row: emoji;
+	grid-column: 1 / -1;
+	justify-self: center;
+	align-self: end;
+	margin-bottom: var(--space-xs);
+	left: auto;
+	width: 16rem;
+}
+
+.report-about > svg {
 	top: 40%;
 	left: 85%;
 	width: 700px;
@@ -729,7 +820,6 @@ section.shape-sun::after {
 }
 
 :is(
-    .shape-rectangle,
 	.report-background,
 	.report-goals,
 	.report-legal,
@@ -778,6 +868,8 @@ section.shape-sun::after {
 
 
 li:is(
+    .layout-cover,
+    .layout-back,
     .shape-rectangle,
     .report-about,
     .report-title,
@@ -805,6 +897,8 @@ li:is(
 }
 
 li:is(
+    .layout-cover,
+    .layout-back,
     .shape-rectangle,
     .report-about,
     .report-title,
