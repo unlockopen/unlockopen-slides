@@ -1,0 +1,47 @@
+---
+title: "{{ title }}"
+date: {{ date }}
+period: "{{ period }}"
+newsletter: {{ name }}
+---
+
+# {{ title }}
+
+*{{ period }}*
+
+{% if description %}
+{{ description }}
+
+{% endif %}
+{% for section in sections %}
+## {{ section.name }}
+
+{% for item in section.items %}
+### [{{ item.title }}]({{ item.link }})
+
+{% if item.localCover %}
+![{{ item.title }}]({{ item.localCover }})
+
+{% endif %}
+{% if item.excerpt %}
+{{ item.excerpt }}
+
+{% endif %}
+{% if item.note %}
+> {{ item.note }}
+
+{% endif %}
+{% if item.highlights.length > 0 %}
+{% for highlight in item.highlights %}
+> {{ highlight }}
+
+{% endfor %}
+{% endif %}
+{% if item.tags.length > 0 %}
+*Tags: {{ item.tags | join(", ") }}*
+
+{% endif %}
+---
+
+{% endfor %}
+{% endfor %}

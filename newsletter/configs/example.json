@@ -1,0 +1,29 @@
+{
+  "name": "open-source-weekly",
+  "title": "Open Source Weekly",
+  "description": "A curated selection of the latest open source links, tools, and insights.",
+  "schedule": "weekly",
+  "raindrop": {
+    "collectionId": 12345678,
+    "tags": ["newsletter"],
+    "limit": 20,
+    "sort": "-created"
+  },
+  "buttondown": {
+    "subjectTemplate": "{{title}} - {{period}}"
+  },
+  "sections": [
+    { "name": "Featured", "tags": ["featured"] },
+    { "name": "Tools & Libraries", "tags": ["tools", "library"] },
+    { "name": "Articles", "tags": ["article", "blog"] },
+    { "name": "Community", "tags": ["community", "event"] }
+  ],
+  "output": {
+    "baseDir": "content/newsletter",
+    "template": "default"
+  },
+  "credentials": {
+    "raindrop_token": "op://Shared/Raindrop/api-token",
+    "buttondown_token": "op://Shared/Buttondown/api-key"
+  }
+}

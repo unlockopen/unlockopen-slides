@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://unlockopen.com/schemas/newsletter.schema.json",
+  "title": "Newsletter Configuration",
+  "description": "Schema for configuring an UnlockOpen newsletter that fetches from Raindrop.io and drafts via Buttondown",
+  "type": "object",
+  "required": ["name", "title", "schedule", "raindrop", "buttondown", "credentials"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "URL-safe slug used for directory names and identification"
+    },
+    "title": {
+      "type": "string",
+      "description": "Human-readable newsletter title, used in subject lines and headings"
+    },
+    "description": {
+      "type": "string",
+      "description": "Optional intro text rendered at the top of each issue"
+    },
+    "schedule": {
+      "type": "string",
+      "enum": ["weekly", "biweekly", "monthly"],
+      "description": "Publishing cadence, determines the output directory period format"
+    },
+    "raindrop": {
+      "type": "object",
+      "required": ["collectionId"],
+      "properties": {
+        "collectionId": {
+          "type": "integer",
+          "description": "Raindrop.io collection ID. Use 'unlock-newsletter collections' to discover IDs"
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Filter raindrops by these tags (combined with OR logic)"
+        },
+        "search": {
+          "type": "string",
+          "description": "Additional freeform search query"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50,
+          "default": 25,
+          "description": "Maximum number of items to fetch per request"
+        },
+        "sort": {
+          "type": "string",
+          "enum": ["-created", "-title", "-domain", "title", "domain", "created"],
+          "default": "-created",
+          "description": "Sort order for fetched raindrops"
+        }
+      },
+      "additionalProperties": false
+    },
+    "buttondown": {
+      "type": "object",
+      "properties": {
+        "newsletterId": {
+          "type": "string",
+          "description": "Buttondown newsletter ID (for multi-newsletter accounts)"
+        },
+        "subjectTemplate": {
+          "type": "string",
+          "default": "{{title}} - {{period}}",
+          "description": "Subject line template. Supports {{title}}, {{name}}, {{period}} placeholders"
+        }
+      },
+      "additionalProperties": false
+    },
+    "sections": {
+      "type": "array",
+      "description": "Optional named sections to group items by tag. Items are placed in the first matching section",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Section heading in the rendered newsletter"
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Tags that place an item into this section"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "baseDir": {
+          "type": "string",
+          "default": "content/newsletter",
+          "description": "Base output directory. Newsletters are written to {baseDir}/{name}/{period}/newsletter.md"
+        },
+        "template": {
+          "type": "string",
+          "default": "default",
+          "description": "Nunjucks template name (without .njk extension) from the templates/ directory"
+        }
+      },
+      "additionalProperties": false
+    },
+    "credentials": {
+      "type": "object",
+      "required": ["raindrop_token", "buttondown_token"],
+      "properties": {
+        "raindrop_token": {
+          "type": "string",
+          "pattern": "^op://",
+          "description": "1Password secret reference for the Raindrop.io API token"
+        },
+        "buttondown_token": {
+          "type": "string",
+          "pattern": "^op://",
+          "description": "1Password secret reference for the Buttondown API key"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

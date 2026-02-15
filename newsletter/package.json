@@ -1,0 +1,19 @@
+{
+  "name": "unlockopen-newsletter",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Newsletter automation modules for fetching content from Raindrop.io and drafting via Buttondown",
+  "bin": {
+    "unlock-newsletter": "./cli.js"
+  },
+  "scripts": {
+    "fetch": "node cli.js fetch",
+    "draft": "node cli.js draft",
+    "preview": "node cli.js preview",
+    "list": "node cli.js list"
+  },
+  "dependencies": {
+    "commander": "^13.0.0",
+    "nunjucks": "^3.2.4"
+  }
+}
